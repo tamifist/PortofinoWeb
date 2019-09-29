@@ -1,12 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import {MenuComponent} from './components/menu/menu.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { LanguageOfPulseComponent } from './components/menu/language-of-pulse/language-of-pulse.component';
+import { CreatingPulseComponent } from './components/menu/creating-pulse/creating-pulse.component';
 
+
+const menuRoutes: Routes = [
+  { path: 'languageOfPulse', component: LanguageOfPulseComponent},
+  { path: 'creatingPulse', component: CreatingPulseComponent},
+];
 
 const routes: Routes = [
   { path: '', redirectTo: 'menu', pathMatch: 'full' },
-  { path: 'menu', component: MenuComponent },
+  { path: 'menu', component: MenuComponent, children: menuRoutes },
 ];
 
 @NgModule({
