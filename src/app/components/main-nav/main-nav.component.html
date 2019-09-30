@@ -3,7 +3,8 @@
       [attr.role]="(isHandset) ? 'dialog' : 'navigation'"
       [mode]="(isHandset) ? 'over' : 'side'"
       [opened]="(isHandset) === false">
-    <mat-nav-list (click)="changeClassForMenu($event)">
+    <mat-nav-list [ngClass]="{desktopStyle:!isHandset}"
+                  (click)="changeClassForMenu($event)">
       <a mat-list-item
          (click)="(isHandset) && drawer.close()"
          routerLink="languageOfPulse" >The Language of Pulse</a>

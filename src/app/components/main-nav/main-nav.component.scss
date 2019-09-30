@@ -27,7 +27,6 @@ mat-sidenav {
 ::ng-deep .mat-list-item-content {
   color: #0563C1 !important;
   text-decoration: underline;
-  letter-spacing: 5px;
   font-weight: 500;
 }
 
@@ -36,5 +35,10 @@ mat-sidenav {
     font-weight: bolder;
     font-size: 18px;
    }
+}
+
+::ng-deep .desktopStyle {
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
