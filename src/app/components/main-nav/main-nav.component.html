@@ -3,40 +3,32 @@
       [attr.role]="(isHandset) ? 'dialog' : 'navigation'"
       [mode]="(isHandset) ? 'over' : 'side'"
       [opened]="(isHandset) === false">
-    <mat-nav-list>
+    <mat-nav-list (click)="changeClassForMenu($event)">
       <a mat-list-item
-         class="link"
          (click)="(isHandset) && drawer.close()"
          routerLink="languageOfPulse" >The Language of Pulse</a>
       <a mat-list-item
-         class="link"
          (click)="(isHandset) && drawer.close()"
          routerLink="creatingPulse" >Creating a Pulse</a>
       <a mat-list-item
-         class="link"
          (click)="(isHandset) && drawer.close()"
          routerLink="creatingPulse">Responding to a Pulse with a Beat</a>
       <a mat-list-item class="link"
          (click)="(isHandset) && drawer.close()"
          routerLink="creatingPulse">Enjoying a Live Pulse</a>
       <a mat-list-item
-         class="link"
          (click)="(isHandset) && drawer.close()"
          routerLink="creatingPulse">Pulse for Corporates</a>
       <a mat-list-item
-         class="link"
          (click)="(isHandset) && drawer.close()"
          routerLink="creatingPulse">Managing Your Account</a>
       <a mat-list-item
-         class="link"
          (click)="(isHandset) && drawer.close()"
          routerLink="creatingPulse">Finding Your Way Around the Pulse App</a>
       <a mat-list-item
-         class="link"
          (click)="(isHandset) && drawer.close()"
          routerLink="creatingPulse">Data and Insights from Pulses</a>
       <a mat-list-item
-         class="link"
          (click)="(isHandset) && drawer.close()"
          routerLink="creatingPulse">Your Privacy and Safety</a>
       <a mat-list-item

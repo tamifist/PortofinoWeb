@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Renderer2} from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
 @Component({
@@ -11,7 +10,8 @@ import { map, shareReplay } from 'rxjs/operators';
 export class MainNavComponent {
   isHandset: boolean;
 
-  constructor(private breakpointObserver: BreakpointObserver) {
+  constructor(private breakpointObserver: BreakpointObserver,
+              private render: Renderer2) {
     this.breakpointObserver.observe(Breakpoints.Handset)
       .pipe(
         map(result => result.matches),
@@ -19,6 +19,15 @@ export class MainNavComponent {
       ).subscribe((result) => {
      this.isHandset = result;
     });
+  }
+
+  changeClassForMenu(event) {
+    // clear class active from another elements
+    event.currentTarget.childNodes.forEach((currentValue, index, array) => {
+      this.render.removeClass(currentValue.childNodes[0], 'active');
+    });
+
+    this.render.addClass(event.target, 'active');
   }
 
 }
