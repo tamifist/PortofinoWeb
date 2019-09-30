@@ -1,12 +1,52 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
+      [attr.role]="(isHandset) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset) ? 'over' : 'side'"
+      [opened]="(isHandset) === false">
     <mat-nav-list>
-      <a mat-list-item routerLink="languageOfPulse" >The Language of Pulse</a>
-      <a mat-list-item routerLink="creatingPulse" >Creating a Pulse</a>
-      <a mat-list-item >Link 3</a>
+      <a mat-list-item
+         class="link"
+         (click)="(isHandset) && drawer.close()"
+         routerLink="languageOfPulse" >The Language of Pulse</a>
+      <a mat-list-item
+         class="link"
+         (click)="(isHandset) && drawer.close()"
+         routerLink="creatingPulse" >Creating a Pulse</a>
+      <a mat-list-item
+         class="link"
+         (click)="(isHandset) && drawer.close()"
+         routerLink="creatingPulse">Responding to a Pulse with a Beat</a>
+      <a mat-list-item class="link"
+         (click)="(isHandset) && drawer.close()"
+         routerLink="creatingPulse">Enjoying a Live Pulse</a>
+      <a mat-list-item
+         class="link"
+         (click)="(isHandset) && drawer.close()"
+         routerLink="creatingPulse">Pulse for Corporates</a>
+      <a mat-list-item
+         class="link"
+         (click)="(isHandset) && drawer.close()"
+         routerLink="creatingPulse">Managing Your Account</a>
+      <a mat-list-item
+         class="link"
+         (click)="(isHandset) && drawer.close()"
+         routerLink="creatingPulse">Finding Your Way Around the Pulse App</a>
+      <a mat-list-item
+         class="link"
+         (click)="(isHandset) && drawer.close()"
+         routerLink="creatingPulse">Data and Insights from Pulses</a>
+      <a mat-list-item
+         class="link"
+         (click)="(isHandset) && drawer.close()"
+         routerLink="creatingPulse">Your Privacy and Safety</a>
+      <a mat-list-item
+         class="link"
+         (click)="(isHandset) && drawer.close()"
+         routerLink="creatingPulse">Privacy Policy</a>
+      <a mat-list-item
+         class="link"
+         (click)="(isHandset) && drawer.close()"
+         routerLink="creatingPulse">Terms of Use</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -15,7 +55,7 @@
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
+        *ngIf="isHandset">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
     <router-outlet></router-outlet>

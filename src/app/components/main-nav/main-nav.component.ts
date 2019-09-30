@@ -9,13 +9,16 @@ import { map, shareReplay } from 'rxjs/operators';
   styleUrls: ['./main-nav.component.scss']
 })
 export class MainNavComponent {
+  isHandset: boolean;
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches),
-      shareReplay()
-    );
-
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver) {
+    this.breakpointObserver.observe(Breakpoints.Handset)
+      .pipe(
+        map(result => result.matches),
+        shareReplay()
+      ).subscribe((result) => {
+     this.isHandset = result;
+    });
+  }
 
 }
