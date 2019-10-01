@@ -14,6 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { CreatingPulseComponent } from './components/menu/creating-pulse/creating-pulse.component';
 import { LanguageOfPulseComponent } from './components/menu/language-of-pulse/language-of-pulse.component';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { LanguageOfPulseComponent } from './components/menu/language-of-pulse/la
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    NgbCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
