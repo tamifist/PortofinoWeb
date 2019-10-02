@@ -57,10 +57,10 @@ export class CreatingPulseComponent implements OnInit  {
     this.showAnimation = 'start';
 
     // tslint:disable-next-line:no-conditional-assignment
-    if(this.NgbCarouselElement.activeId === 'ngb-slide-3') {
-     this.router.navigate(['menu/languageOfPulse']);
-     return;
-   }
+   //  if(this.NgbCarouselElement.activeId === 'ngb-slide-3') {
+   //   this.router.navigate(['menu/languageOfPulse']);
+   //   return;
+   // }
 
     this.NgbCarouselElement.next();
 
