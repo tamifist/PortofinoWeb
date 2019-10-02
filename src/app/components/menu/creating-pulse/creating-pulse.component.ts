@@ -3,6 +3,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import {map, shareReplay} from 'rxjs/operators';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-creating-pulse',
@@ -38,7 +39,7 @@ export class CreatingPulseComponent implements OnInit  {
   isHandset: boolean;
   @ViewChild(NgbCarousel, {static : false }) NgbCarouselElement: NgbCarousel ;
 
-  constructor(private breakpointObserver: BreakpointObserver) {
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
     this.breakpointObserver.observe(Breakpoints.Handset)
       .pipe(
         map(result => result.matches),
@@ -54,6 +55,12 @@ export class CreatingPulseComponent implements OnInit  {
 
   carouselNext() {
     this.showAnimation = 'start';
+
+    // tslint:disable-next-line:no-conditional-assignment
+    if(this.NgbCarouselElement.activeId === 'ngb-slide-3') {
+     this.router.navigate(['menu/languageOfPulse']);
+     return;
+   }
 
     this.NgbCarouselElement.next();
 
