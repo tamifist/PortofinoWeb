@@ -5,7 +5,7 @@
       [opened]="(isHandset) === false">
     <mat-nav-list [ngClass]="{desktopStyle:!isHandset}"
                   (click)="changeClassForMenu($event)">
-      <a mat-list-item
+      <a mat-list-item style="font-family: 'Roboto', sans-serif;"
          (click)="(isHandset) && drawer.close()"
          routerLink="languageOfPulse" >The Language of Pulse</a>
       <a mat-list-item

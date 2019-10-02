@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild, } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
+import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
+import {map, shareReplay} from 'rxjs/operators';
 
 @Component({
   selector: 'app-creating-pulse',
@@ -13,8 +16,9 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
       state('end', style({
         width: '100%'
       })),
-      transition('* => end', animate('5s')
-      ),
+      transition('* => end', [ animate('2s') ]),
+      transition('* => start', [ animate('0s')],
+    ),
     ]),
     trigger('narrowing', [
       state('start', style({
@@ -23,19 +27,38 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
       state('end', style({
         width: '0%'
       })),
-      transition('* => end', animate('5s')
+      transition('* => end', [ animate('2s') ]),
+      transition('* => start', [ animate('0s')],
       ),
     ]),
   ],
 })
-export class CreatingPulseComponent implements OnInit {
+export class CreatingPulseComponent implements OnInit  {
   showAnimation = 'start';
+  isHandset: boolean;
+  @ViewChild(NgbCarousel, {static : false }) NgbCarouselElement: NgbCarousel ;
 
-  constructor() {
+  constructor(private breakpointObserver: BreakpointObserver) {
+    this.breakpointObserver.observe(Breakpoints.Handset)
+      .pipe(
+        map(result => result.matches),
+        shareReplay()
+      ).subscribe((result) => {
+      this.isHandset = result;
+    });
   }
 
   ngOnInit() {
     this.showAnimation = 'end';
   }
 
+  carouselNext() {
+    this.showAnimation = 'start';
+
+    this.NgbCarouselElement.next();
+
+    setTimeout(() => {
+     this.showAnimation = 'end';
+   });
+  }
 }
