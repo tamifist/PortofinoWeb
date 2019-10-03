@@ -25,9 +25,10 @@ mat-sidenav {
 }
 
 ::ng-deep .mat-list-item-content {
-  color: #0563C1 !important;
   text-decoration: underline;
+  color: #0096FF !important;
   font-weight: 500;
+  font-size: 22px;
 }
 
 ::ng-deep .mat-list-item-content {
