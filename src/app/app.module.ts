@@ -15,6 +15,7 @@ import { MatListModule } from '@angular/material/list';
 import { CreatingPulseComponent } from './components/menu/creating-pulse/creating-pulse.component';
 import { LanguageOfPulseComponent } from './components/menu/language-of-pulse/language-of-pulse.component';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { StartPageComponent } from './components/start-page/start-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
     MenuComponent,
     MainNavComponent,
     LanguageOfPulseComponent,
-    CreatingPulseComponent
+    CreatingPulseComponent,
+    StartPageComponent
   ],
   imports: [
     BrowserModule,

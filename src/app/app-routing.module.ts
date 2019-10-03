@@ -5,6 +5,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { LanguageOfPulseComponent } from './components/menu/language-of-pulse/language-of-pulse.component';
 import { CreatingPulseComponent } from './components/menu/creating-pulse/creating-pulse.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { StartPageComponent } from './components/start-page/start-page.component';
 
 
 const menuRoutes: Routes = [
@@ -13,8 +14,9 @@ const menuRoutes: Routes = [
 ];
 
 const routes: Routes = [
-  { path: '', redirectTo: 'menu', pathMatch: 'full' },
-  { path: 'menu', component: MenuComponent, children: menuRoutes },
+  { path: '', redirectTo: 'startPage', pathMatch: 'full' },
+  { path: 'menu', component: MenuComponent, children: menuRoutes , data: {animation: 'menu'} },
+  { path: 'startPage', component: StartPageComponent, children: menuRoutes, data: {animation: 'startPage'}  },
 ];
 
 @NgModule({
