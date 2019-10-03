@@ -25,6 +25,63 @@
   margin-right: 10px;
 }
 
+
 .mobileStyleImage{
-  width: 80% !important;
+  width: 316px !important;
+  height: 98px !important;
+  margin-top: 45px !important;
+}
+
+.mobileBottomImageBottomText{
+  position: absolute;
+  color: white;
+  font-size: 26px !important;
+  left: 5%;
+  bottom: 17%;
+}
+
+.mobileBottomImageTopText{
+  font-size: 15px !important;
+}
+
+.desktopTopImageFace{
+  position: absolute;
+  right: 6%;
+  top: -41%;
+  width: 19% !important;
+  height: 70% !important;
+}
+
+
+.desktopBottomImage{
+  width: 429px;
+  height: 140px;
+  background-color: #0070c0;
+  border-radius: 25px;
+  margin-left: 20px;
+  position: relative;
+}
+
+.desktopBottomImageTopText{
+  position: absolute;
+  color: white;
+  top: 10%;
+  left: 5%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+.desktopBottomImageBottomText{
+  position: absolute;
+  color: white;
+  font-size: 39px;
+  left: 5%;
+  bottom: 17%;
+}
+
+.desktopTopImageFace{
+  position: absolute;
+  right: 6%;
+  top: -41%;
+  width: 33%;
+  height: 97%;
 }
