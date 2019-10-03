@@ -1,14 +1,14 @@
-import { AfterViewInit, Component, OnInit, ViewChild, } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
-import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
-import {map, shareReplay} from 'rxjs/operators';
 import {Router} from '@angular/router';
+import {map, shareReplay} from 'rxjs/operators';
+import {NgbCarousel} from '@ng-bootstrap/ng-bootstrap';
+import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
-  selector: 'app-creating-pulse',
-  templateUrl: './creating-pulse.component.html',
-  styleUrls: ['./creating-pulse.component.scss'],
+  selector: 'app-pesponding-to-pulse-with-beat',
+  templateUrl: './pesponding-to-pulse-with-beat.component.html',
+  styleUrls: ['./pesponding-to-pulse-with-beat.component.scss'],
   animations: [
     trigger('extended', [
       state('start', style({
@@ -19,7 +19,7 @@ import {Router} from '@angular/router';
       })),
       transition('* => end', [ animate('2s') ]),
       transition('* => start', [ animate('0s')],
-    ),
+      ),
     ]),
     trigger('narrowing', [
       state('start', style({
@@ -34,9 +34,9 @@ import {Router} from '@angular/router';
     ]),
   ],
 })
-export class CreatingPulseComponent implements OnInit  {
-  showAnimation = 'start';
+export class PespondingToPulseWithBeatComponent implements OnInit {
   isHandset: boolean;
+  showAnimation = 'start';
   @ViewChild(NgbCarousel, {static : false }) NgbCarouselElement: NgbCarousel ;
 
   constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
@@ -58,8 +58,8 @@ export class CreatingPulseComponent implements OnInit  {
 
     // tslint:disable-next-line:no-conditional-assignment
     if (this.NgbCarouselElement.activeId === 'ngb-slide-3' && !this.isHandset) {
-     this.router.navigate(['menu/respondingToPulseWithBeat']);
-     return;
+      this.router.navigate(['menu/respondingToPulseWithBeat']);
+      return;
     }
 
     if (this.NgbCarouselElement.activeId === 'ngb-slide-6' && this.isHandset) {
@@ -70,7 +70,7 @@ export class CreatingPulseComponent implements OnInit  {
     this.NgbCarouselElement.next();
 
     setTimeout(() => {
-     this.showAnimation = 'end';
-   });
+      this.showAnimation = 'end';
+    });
   }
 }

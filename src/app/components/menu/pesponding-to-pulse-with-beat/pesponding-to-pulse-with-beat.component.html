@@ -1,0 +1,38 @@
+<ngb-carousel *ngIf="!isHandset" #carousel interval="false" >
+  <ng-template ngbSlide>
+    <div>
+      <img style="margin-left: 90px;" class="content-up-effect" src="../../../../assets/images/FromTheHomeTrendingMyPulse.png" >
+      <img  style="margin-top: 100px; margin-left: 43px; width: 956px;" src="../../../../assets/images/RespondingToPulse-1.png" >
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div>
+      <img class="content-up-effect"  style="position: absolute; top: 40px;left: 90px;width: 400px;" src="../../../../assets/images/WhoWhatAreMyChoice.PNG" >
+      <img  style="width: 1100px;margin-top: 80px; margin-left: 58px;"  src="../../../../assets/images/CreatingPulse-2.png" >
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div>
+      <img class="content-up-effect" style="position: absolute; top: 60px;left: 100px;"  src="../../../../assets/images/WhyiWouldSelectChoce.png" >
+      <img class="content-up-effect" style="position: absolute; top: 60px;left: 760px;"  src="../../../../assets/images/HowImportantIsEachThingToMe.png" >
+      <img  style="width: 1100px; margin-top: 106px; margin-left: 113px;"  src="../../../../assets/images/CreatingPulse-3.png" >
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div >
+      <img  class="content-up-effect" style="position: absolute; top: 60px;left: 100px;"  src="../../../../assets/images/YouAreNowReadyToDOFinalReviewOfPulseAndPublish.png" >
+      <img style="width: 25%;  margin-top: 112px;  margin-left: 358px;"  src="./../../../assets/images/Pulse_create_7.jpeg" >
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+<img class="image-carousel-next"
+     (click)="carouselNext()"
+     [ngClass]="{mobileStyle:isHandset}"
+     src="./../../../assets/images/arrow-right.PNG" >
+
+
+<div *ngIf="!isHandset" class="flex">
+  <div [@extended]="showAnimation" class="extended" ></div>
+  <div  [@narrowing]="showAnimation" class="narrowing" ></div>
+</div>

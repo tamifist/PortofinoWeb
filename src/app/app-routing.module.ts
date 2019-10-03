@@ -6,11 +6,14 @@ import { LanguageOfPulseComponent } from './components/menu/language-of-pulse/la
 import { CreatingPulseComponent } from './components/menu/creating-pulse/creating-pulse.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { StartPageComponent } from './components/start-page/start-page.component';
+import { PespondingToPulseWithBeatComponent }
+from './components/menu/pesponding-to-pulse-with-beat/pesponding-to-pulse-with-beat.component';
 
 
 const menuRoutes: Routes = [
   { path: 'languageOfPulse', component: LanguageOfPulseComponent},
   { path: 'creatingPulse', component: CreatingPulseComponent},
+  { path: 'respondingToPulseWithBeat', component: PespondingToPulseWithBeatComponent},
 ];
 
 const routes: Routes = [
