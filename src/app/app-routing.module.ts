@@ -9,6 +9,7 @@ import { StartPageComponent } from './components/start-page/start-page.component
 import { PespondingToPulseWithBeatComponent }
 from './components/menu/pesponding-to-pulse-with-beat/pesponding-to-pulse-with-beat.component';
 import {PrivacyPolicyComponent} from './components/menu/privacy-policy/privacy-policy.component';
+import {TermOfUseComponent} from './components/menu/term-of-use/term-of-use.component';
 
 
 const menuRoutes: Routes = [
@@ -16,12 +17,12 @@ const menuRoutes: Routes = [
   { path: 'creatingPulse', component: CreatingPulseComponent},
   { path: 'respondingToPulseWithBeat', component: PespondingToPulseWithBeatComponent},
   { path: 'privacyPolicy', component: PrivacyPolicyComponent},
+  { path: 'termOfUse', component: TermOfUseComponent},
 ];
 
 const routes: Routes = [
-  { path: '', redirectTo: 'startPage', pathMatch: 'full' },
+  { path: '', redirectTo: 'menu', pathMatch: 'full' },
   { path: 'menu', component: MenuComponent, children: menuRoutes , data: {animation: 'menu'} },
-  { path: 'startPage', component: StartPageComponent, children: menuRoutes, data: {animation: 'startPage'}  },
 ];
 
 @NgModule({

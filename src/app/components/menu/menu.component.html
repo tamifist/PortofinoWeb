@@ -1,3 +1,47 @@
+<div style="display: flex; flex-direction: row; justify-content: space-between;" >
+  <img  [ngClass]="{mobileStyleTruePulseLogo:isHandset}" style="width:160px;margin-left: 110px; margin-top: 35px;" src="../../../assets/images/truePulseLogo.PNG">
+  <div  [ngClass]="{mobileStyleTruePulseLogoInfo:isHandset}" style=" margin-top: 82px ;margin-right: 331px;"><a style="color: #0070c0!important; font-size: 20px;!important" href="mailto:info@truepulse.net">info@truepulse.net</a></div>
+</div>
+<div  [ngClass]="{mobileStyleForMobile:isHandset}" style="position: relative;margin-top: 35px;">
+  <img style="height: 360px" class="homeMainImage" src="../../../assets/images/Home_Main_image%20-%20Copy.jpg">
+  <img [ngClass]="{mobileStyleForGalaxy:isHandset}" style="position: absolute;right: 116px; top: 10%; width: 114px; height: 64%;"   src="../../../assets/images/galaxy-s9-mockup-main_comp.png">
+  <img [ngClass]="{mobileStyleForGalaxy:isHandset}" style="position: absolute;top: 75%;right: 116px;width: 114px; height: 12%;"  src="../../../assets/images/Androod%20Google%20Play%20(2).png">
+  <img [ngClass]="{mobileStyleForIphone:isHandset}" style="position: absolute;right: 286px; top: 10%; width: 135px; height: 64%;"  src="../../../assets/images/iphone-mockup-main_comp.png">
+  <img [ngClass]="{mobileStyleForIphone:isHandset}" style="position: absolute;top: 75%;right: 286px;width: 114px; height: 12%;"   src="../../../assets/images/iOS%20App%20Store%20(2).png">
+</div>
+
+<div [ngClass]="{mobileStyleCenterText:isHandset}" style=" font-family: 'Roboto', sans-serif; display: flex;justify-content: center; color: #0096FF; font-weight: 500;font-size: 22px">
+  Is your opinion informed, a guess or your gut?
+  You will be either lucky or wrong
+
+</div>
+
+<div [ngClass]="{mobileStyleBottomContent:isHandset}" class="row" style="display: flex;justify-content: center; margin-top: 70px;margin-left: 0;margin-right: 0">
+  <div  [ngClass]="{mobileStyleImage:isHandset}" class=" desktopBottomImage">
+    <div [ngClass]="{mobileBottomImageTopText:isHandset}" class="desktopBottomImageTopText">You want to be heard!</div>
+    <div [ngClass]="{mobileBottomImageBottomText:isHandset}" class="desktopBottomImageBottomText">Create a Pulse</div>
+    <img [ngClass]="{mobileTopImageFace:isHandset}" class="desktopTopImageFace" src="../../../assets/images/face5a_circle.png"/>
+    <div style="position: absolute; bottom: -26px; left: 11px;" >Learn more...</div>
+  </div>
+  <div [ngClass]="{mobileStyleImage:isHandset}" class=" desktopBottomImage">
+    <div [ngClass]="{mobileBottomImageTopText:isHandset}"  class="desktopBottomImageTopText">You want your opinion to <br> count! </div>
+    <div [ngClass]="{mobileBottomImageBottomText:isHandset}" class="desktopBottomImageBottomText">Respond with a Beat</div>
+    <img [ngClass]="{mobileTopImageFace:isHandset}" class="desktopTopImageFace" src="../../../assets/images/face4a_circle.png"/>
+    <div style="position: absolute; bottom: -26px; left: 11px;" >Learn more...</div>
+  </div>
+  <div [ngClass]="{mobileStyleImage:isHandset}" class=" desktopBottomImage">
+    <div [ngClass]="{mobileBottomImageTopText:isHandset}" class="desktopBottomImageTopText">You want to make a <br> Difference</div>
+    <div [ngClass]="{mobileBottomImageBottomText:isHandset}" class="desktopBottomImageBottomText">Look at an Insight</div>
+    <img [ngClass]="{mobileTopImageFace:isHandset}" class="desktopTopImageFace" src="../../../assets/images/face7a_circle.png"/>
+    <div style="position: absolute; bottom: -26px; left: 11px;" >Learn more...</div>
+
+  </div>
+</div>
+
+<div style="text-align: center">
+  <img  routerLink="/menu/languageOfPulse" src="../../../assets/images/arrow-down.png"/>
+</div>
+
 <img class="image" src="../../../assets/images/banner_image.jpg" />
 
 <app-main-nav></app-main-nav>

@@ -1,3 +1,111 @@
 .image {
   width: 100%;
 }
+
+.mobileStyleTruePulseLogo{
+  margin-left: 10px !important;
+  width: 134px !important;
+  margin-top: 31px !important;
+}
+
+.mobileStyleTruePulseLogoInfo{
+  margin-right: 10px !important;
+  margin-top: 70px !important;
+}
+
+.mobileStyleBottomContent{
+  flex-direction:column !important;
+  align-items: center !important;
+  margin-top: -22px !important;
+}
+
+.mobileStyleCenterText{
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+
+.mobileStyleImage{
+  width: 316px !important;
+  height: 97px !important;
+  margin-top: 45px !important;
+}
+
+.mobileBottomImageBottomText{
+  position: absolute;
+  color: white;
+  font-size: 26px !important;
+  left: 5%;
+  bottom: 17%;
+}
+
+.mobileBottomImageTopText{
+  font-size: 15px !important;
+}
+
+.desktopTopImageFace{
+  position: absolute;
+  right: 6%;
+  top: -41%;
+  width: 130px !important;
+  height: 130px !important;
+}
+
+
+.desktopBottomImage{
+  width: 429px;
+  height: 140px;
+  background-color: #0070c0;
+  border-radius: 25px;
+  margin-left: 20px;
+  position: relative;
+  margin-top: 67px;
+}
+
+.desktopBottomImageTopText{
+  position: absolute;
+  color: white;
+  top: 11%;
+  left: 5%;
+  font-size: 20px;
+  line-height: 1.2;
+}
+.desktopBottomImageBottomText{
+  position: absolute;
+  color: white;
+  font-size: 37px;
+  left: 5%;
+  bottom: 11%;
+}
+
+.desktopTopImageFace{
+  position: absolute;
+  right: 6%;
+  top: -41%;
+  width: 33%;
+  height: 97%;
+}
+
+.mobileTopImageFace{
+  width: 80px !important;
+  height: 80px !important;
+}
+
+.mobileStyleForGalaxy{
+  right: 15% !important;
+}
+
+.mobileStyleForIphone{
+  right: 54% !important;
+}
+
+.homeMainImage{
+  @media screen and (min-width: 1900px) {
+    width: 100%;
+  }
+}
+
+.mobileStyleForMobile {
+  margin-top: 35px !important;
+}
