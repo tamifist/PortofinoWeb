@@ -3,16 +3,14 @@
 }
 
 .mobileStyleTruePulseLogo{
-  margin-right: 0 !important;
-  margin-left: 0 !important;
-  margin-top: 0 !important;
-  width: 102px !important;
+  margin-left: 10px !important;
+  width: 134px !important;
+  margin-top: 31px !important;
 }
 
 .mobileStyleTruePulseLogoInfo{
   margin-right: 10px !important;
-  margin-left: 0 !important;
-  margin-top: 21px !important;
+  margin-top: 70px !important;
 }
 
 .mobileStyleBottomContent{
@@ -100,4 +98,14 @@
 
 .mobileStyleForIphone{
   right: 54% !important;
+}
+
+.homeMainImage{
+  @media screen and (min-width: 1900px) {
+    width: 100%;
+  }
+}
+
+.mobileStyleForMobile {
+  margin-top: 35px !important;
 }
