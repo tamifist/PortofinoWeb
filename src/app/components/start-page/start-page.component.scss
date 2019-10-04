@@ -30,8 +30,8 @@
 
 .mobileStyleImage{
   width: 316px !important;
-  height: 69px !important;
-  margin-top: 29px !important;
+  height: 97px !important;
+  margin-top: 45px !important;
 }
 
 .mobileBottomImageBottomText{
@@ -68,7 +68,7 @@
 .desktopBottomImageTopText{
   position: absolute;
   color: white;
-  top: 7%;
+  top: 11%;
   left: 5%;
   font-size: 20px;
   line-height: 1.2;
@@ -87,4 +87,17 @@
   top: -41%;
   width: 33%;
   height: 97%;
+}
+
+.mobileTopImageFace{
+  width: 80px !important;
+  height: 80px !important;
+}
+
+.mobileStyleForGalaxy{
+ right: 18% !important;
+}
+
+.mobileStyleForIphone{
+  right: 55% !important;
 }
