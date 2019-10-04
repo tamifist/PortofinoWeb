@@ -8,12 +8,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { StartPageComponent } from './components/start-page/start-page.component';
 import { PespondingToPulseWithBeatComponent }
 from './components/menu/pesponding-to-pulse-with-beat/pesponding-to-pulse-with-beat.component';
+import {PrivacyPolicyComponent} from './components/menu/privacy-policy/privacy-policy.component';
 
 
 const menuRoutes: Routes = [
   { path: 'languageOfPulse', component: LanguageOfPulseComponent},
   { path: 'creatingPulse', component: CreatingPulseComponent},
   { path: 'respondingToPulseWithBeat', component: PespondingToPulseWithBeatComponent},
+  { path: 'privacyPolicy', component: PrivacyPolicyComponent},
 ];
 
 const routes: Routes = [

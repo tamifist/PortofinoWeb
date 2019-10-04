@@ -17,6 +17,7 @@ import { LanguageOfPulseComponent } from './components/menu/language-of-pulse/la
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { StartPageComponent } from './components/start-page/start-page.component';
 import { PespondingToPulseWithBeatComponent } from './components/menu/pesponding-to-pulse-with-beat/pesponding-to-pulse-with-beat.component';
+import { PrivacyPolicyComponent } from './components/menu/privacy-policy/privacy-policy.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PespondingToPulseWithBeatComponent } from './components/menu/pesponding
     LanguageOfPulseComponent,
     CreatingPulseComponent,
     StartPageComponent,
-    PespondingToPulseWithBeatComponent
+    PespondingToPulseWithBeatComponent,
+    PrivacyPolicyComponent
   ],
   imports: [
     BrowserModule,
