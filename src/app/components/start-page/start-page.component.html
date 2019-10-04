@@ -4,11 +4,21 @@
 </div>
 <div style="position: relative">
   <img style="width: 100%" src="../../../assets/images/Home_Main_image%20-%20Copy.jpg">
-  <img style="position: absolute;right: 6%; top: 10%; width: 6%; height: 64%;"   src="../../../assets/images/galaxy-s9-mockup-main_comp.png">
-  <img style="position: absolute;top: 75%;right: 6%;width: 7%; height: 12%;"  src="../../../assets/images/Androod%20Google%20Play%20(2).png">
-  <img style="position: absolute;right: 15%; top: 10%; width: 6%; height: 64%;"  src="../../../assets/images/iphone-mockup-main_comp.png">
-  <img style="position: absolute;top: 75%;right: 15%;width: 7%; height: 12%;"   src="../../../assets/images/iOS%20App%20Store%20(2).png">
+  <img *ngIf="!isHandset" style="position: absolute;right: 6%; top: 10%; width: 6%; height: 64%;"   src="../../../assets/images/galaxy-s9-mockup-main_comp.png">
+  <img *ngIf="!isHandset"  style="position: absolute;top: 75%;right: 6%;width: 7%; height: 12%;"  src="../../../assets/images/Androod%20Google%20Play%20(2).png">
+  <img *ngIf="!isHandset"  style="position: absolute;right: 15%; top: 10%; width: 6%; height: 64%;"  src="../../../assets/images/iphone-mockup-main_comp.png">
+  <img *ngIf="!isHandset"  style="position: absolute;top: 75%;right: 15%;width: 7%; height: 12%;"   src="../../../assets/images/iOS%20App%20Store%20(2).png">
 </div>
+<div *ngIf="isHandset"  style="display: flex;justify-content: space-around;">
+  <img style="width: 14%; height: 28%; margin-top: 2px;"  *ngIf="isHandset"    src="../../../assets/images/galaxy-s9-mockup-main_comp.png">
+  <img style="height: 20%;width: 16%;" *ngIf="isHandset"   src="../../../assets/images/iphone-mockup-main_comp.png">
+</div>
+
+<div style="display: flex;justify-content: space-around;" *ngIf="isHandset" >
+  <img style="width: 21%; height: 10%;"  src="../../../assets/images/Androod%20Google%20Play%20(2).png">
+  <img style="width: 21%; height: 10%;"  src="../../../assets/images/iOS%20App%20Store%20(2).png">
+</div>
+
 <div [ngClass]="{mobileStyleCenterText:isHandset}" style=" font-family: 'Roboto', sans-serif; display: flex;justify-content: center; color: #0096FF; font-weight: 500;font-size: 22px">
   Is your opinion informed, a guess or your gut?
   You will be either lucky or wrong
@@ -19,20 +29,24 @@
   <div [ngClass]="{mobileStyleImage:isHandset}" class="desktopBottomImage">
     <div [ngClass]="{mobileBottomImageTopText:isHandset}" class="desktopBottomImageTopText">You want to be heard!</div>
     <div [ngClass]="{mobileBottomImageBottomText:isHandset}" class="desktopBottomImageBottomText">Create a Pulse</div>
-    <img [ngClass]="{desktopTopImageFace:isHandset}" class="desktopTopImageFace" src="../../../assets/images/face5a_circle.png"/>
+    <img [ngClass]="{mobileTopImageFace:isHandset}" class="desktopTopImageFace" src="../../../assets/images/face5a_circle.png"/>
+    <div style="position: absolute; bottom: -20px; left: 9px; font-family: 'Roboto', sans-serif;" >Learn more...</div>
   </div>
   <div [ngClass]="{mobileStyleImage:isHandset}" class="desktopBottomImage">
     <div [ngClass]="{mobileBottomImageTopText:isHandset}" class="desktopBottomImageTopText">You want your opinion to count! </div>
     <div [ngClass]="{mobileBottomImageBottomText:isHandset}" class="desktopBottomImageBottomText">Respond with a Beat</div>
-    <img [ngClass]="{desktopTopImageFace:isHandset}" class="desktopTopImageFace" src="../../../assets/images/face4a_circle.png"/>
+    <img [ngClass]="{mobileTopImageFace:isHandset}" class="desktopTopImageFace" src="../../../assets/images/face4a_circle.png"/>
+    <div style="position: absolute; bottom: -20px; left: 9px; font-family: 'Roboto', sans-serif;" >Learn more...</div>
   </div>
   <div [ngClass]="{mobileStyleImage:isHandset}" class="desktopBottomImage">
     <div [ngClass]="{mobileBottomImageTopText:isHandset}" class="desktopBottomImageTopText">You want to make a Difference</div>
     <div [ngClass]="{mobileBottomImageBottomText:isHandset}" class="desktopBottomImageBottomText">Look at an Insight</div>
-    <img [ngClass]="{desktopTopImageFace:isHandset}" class="desktopTopImageFace" src="../../../assets/images/face7a_circle.png"/>
+    <img [ngClass]="{mobileTopImageFace:isHandset}" class="desktopTopImageFace" src="../../../assets/images/face7a_circle.png"/>
+    <div style="position: absolute; bottom: -20px; left: 9px; font-family: 'Roboto', sans-serif;" >Learn more...</div>
 
   </div>
 
 </div>
-
-<a routerLink="/menu/languageOfPulse" >Menu</a>
+<div style="text-align: center">
+  <img  routerLink="/menu/languageOfPulse" src="../../../assets/images/arrow-down.png"/>
+</div>
