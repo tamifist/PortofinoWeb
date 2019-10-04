@@ -23,6 +23,7 @@ const menuRoutes: Routes = [
 const routes: Routes = [
   { path: '', redirectTo: 'menu', pathMatch: 'full' },
   { path: 'menu', component: MenuComponent, children: menuRoutes , data: {animation: 'menu'} },
+  { path: 'startPage', component: StartPageComponent, children: menuRoutes, data: {animation: 'startPage'}  },
 ];
 
 @NgModule({
