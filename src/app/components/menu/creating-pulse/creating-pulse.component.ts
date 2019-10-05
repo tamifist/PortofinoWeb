@@ -37,9 +37,11 @@ import {Router} from '@angular/router';
 export class CreatingPulseComponent implements OnInit  {
   showAnimation = 'start';
   isHandset: boolean;
+  showNextScreen = true;
+  showPreviousScreen = false;
   @ViewChild(NgbCarousel, {static : false }) NgbCarouselElement: NgbCarousel ;
 
-  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
+  constructor(private breakpointObserver: BreakpointObserver) {
     this.breakpointObserver.observe(Breakpoints.Handset)
       .pipe(
         map(result => result.matches),
@@ -56,15 +58,13 @@ export class CreatingPulseComponent implements OnInit  {
   carouselNext() {
     this.showAnimation = 'start';
 
-    // tslint:disable-next-line:no-conditional-assignment
-    if (this.NgbCarouselElement.activeId === 'ngb-slide-3' && !this.isHandset) {
-     this.router.navigate(['menu/respondingToPulseWithBeat']);
-     return;
+    if (Number(this.NgbCarouselElement.activeId.replace(/\D/g, ''))
+      === (Number(this.NgbCarouselElement.slides.last.id.replace(/\D/g, '')) - 1 ) ) {
+      this.showNextScreen = false;
     }
 
-    if (this.NgbCarouselElement.activeId === 'ngb-slide-6' && this.isHandset) {
-      this.router.navigate(['menu/respondingToPulseWithBeat']);
-      return;
+    if (this.NgbCarouselElement.activeId === this.NgbCarouselElement.slides.first.id ) {
+      this.showPreviousScreen = true;
     }
 
     this.NgbCarouselElement.next();
@@ -72,5 +72,26 @@ export class CreatingPulseComponent implements OnInit  {
     setTimeout(() => {
      this.showAnimation = 'end';
    });
+  }
+
+  carouselPrevious() {
+    this.showAnimation = 'start';
+
+    if (Number(this.NgbCarouselElement.activeId.replace(/\D/g, ''))
+      === (Number(this.NgbCarouselElement.slides.last.id.replace(/\D/g, ''))) ) {
+      this.showNextScreen = true;
+    }
+
+    // tslint:disable-next-line:no-conditional-assignment
+    if (Number(this.NgbCarouselElement.activeId.replace(/\D/g, '')) - 1
+      === (Number(this.NgbCarouselElement.slides.first.id.replace(/\D/g, '')))) {
+      this.showPreviousScreen = false;
+    }
+
+    this.NgbCarouselElement.prev();
+
+    setTimeout(() => {
+      this.showAnimation = 'end';
+    });
   }
 }

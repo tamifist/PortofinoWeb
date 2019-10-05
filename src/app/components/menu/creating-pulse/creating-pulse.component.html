@@ -72,10 +72,15 @@
   </ng-template>
 </ngb-carousel>
 
-<img class="image-carousel-next"
+<img *ngIf="showNextScreen" class="image-carousel-next"
      (click)="carouselNext()"
      [ngClass]="{mobileStyle:isHandset}"
      src="./../../../assets/images/arrow-right.PNG" >
+
+<img *ngIf="showPreviousScreen" class="image-carousel-previous"
+     (click)="carouselPrevious()"
+     [ngClass]="{mobileStyle:isHandset}"
+     src="./../../../assets/images/arrow-left.png " >
 
 
 <div *ngIf="!isHandset" class="flex">
