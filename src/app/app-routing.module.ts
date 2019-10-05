@@ -22,7 +22,7 @@ const menuRoutes: Routes = [
 ];
 
 const routes: Routes = [
-  { path: '', redirectTo: 'menu', pathMatch: 'full' },
+  { path: '', redirectTo: 'menu/languageOfPulse', pathMatch: 'full' },
   { path: 'menu', component: MenuComponent, children: menuRoutes , data: {animation: 'menu'} },
 ];
 

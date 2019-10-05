@@ -116,6 +116,12 @@
   }
 }
 
+.mainContent {
+  @media screen and (min-height: 909px) {
+    height: 100%;
+  }
+}
+
 .mobileStyleForMobile {
   margin-top: 35px !important;
 }
