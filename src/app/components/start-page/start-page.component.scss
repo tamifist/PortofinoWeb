@@ -92,12 +92,22 @@
   height: 80px !important;
 }
 
-.mobileStyleForGalaxy{
- right: 15% !important;
+.mobileStyleForGalaxy {
+   right: 14% !important;
 }
 
-.mobileStyleForIphone{
-  right: 54% !important;
+.mobileStyleForGalaxyGooglePlay {
+  right: 30px !important;
+  top: 271px !important;
+}
+
+.mobileStyleForIphone {
+  right: 51% !important;
+}
+
+.mobileStyleForIphoneAppStore {
+  top: 271px;
+  right: 51% !important;
 }
 
 .homeMainImage{
