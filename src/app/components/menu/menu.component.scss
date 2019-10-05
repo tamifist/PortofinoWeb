@@ -1,3 +1,6 @@
+:host {
+  background-color: #FFFFFF;
+}
 
 .mobileStyleTruePulseLogo{
   margin-left: 10px !important;
@@ -7,13 +10,13 @@
 
 .mobileStyleTruePulseLogoInfo{
   margin-right: 10px !important;
-  margin-top: 70px !important;
+  margin-top: 10px !important;
 }
 
 .mobileStyleBottomContent{
   flex-direction:column !important;
   align-items: center !important;
-  margin-top: -22px !important;
+  margin-top: 0px !important;
 }
 
 .mobileStyleCenterText{
@@ -26,7 +29,7 @@
 .mobileStyleImage{
   width: 316px !important;
   height: 97px !important;
-  margin-top: 45px !important;
+  margin-top: 73px !important;
 }
 
 .mobileBottomImageBottomText{
@@ -89,12 +92,22 @@
   height: 80px !important;
 }
 
-.mobileStyleForGalaxy{
-  right: 15% !important;
+.mobileStyleForGalaxy {
+  right: 14% !important;
 }
 
-.mobileStyleForIphone{
-  right: 54% !important;
+.mobileStyleForGalaxyGooglePlay {
+  right: 30px !important;
+  top: 271px !important;
+}
+
+.mobileStyleForIphone {
+  right: 51% !important;
+}
+
+.mobileStyleForIphoneAppStore {
+  top: 271px;
+  right: 51% !important;
 }
 
 .homeMainImage{

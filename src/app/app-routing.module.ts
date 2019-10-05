@@ -5,7 +5,6 @@ import { MenuComponent } from './components/menu/menu.component';
 import { LanguageOfPulseComponent } from './components/menu/language-of-pulse/language-of-pulse.component';
 import { CreatingPulseComponent } from './components/menu/creating-pulse/creating-pulse.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { StartPageComponent } from './components/start-page/start-page.component';
 import { PespondingToPulseWithBeatComponent }
 from './components/menu/pesponding-to-pulse-with-beat/pesponding-to-pulse-with-beat.component';
 import {PrivacyPolicyComponent} from './components/menu/privacy-policy/privacy-policy.component';
@@ -23,7 +22,6 @@ const menuRoutes: Routes = [
 const routes: Routes = [
   { path: '', redirectTo: 'menu', pathMatch: 'full' },
   { path: 'menu', component: MenuComponent, children: menuRoutes , data: {animation: 'menu'} },
-  { path: 'startPage', component: StartPageComponent, children: menuRoutes, data: {animation: 'startPage'}  },
 ];
 
 @NgModule({

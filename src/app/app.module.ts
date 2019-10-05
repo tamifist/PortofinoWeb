@@ -15,7 +15,6 @@ import { MatListModule } from '@angular/material/list';
 import { CreatingPulseComponent } from './components/menu/creating-pulse/creating-pulse.component';
 import { LanguageOfPulseComponent } from './components/menu/language-of-pulse/language-of-pulse.component';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
-import { StartPageComponent } from './components/start-page/start-page.component';
 import { PespondingToPulseWithBeatComponent } from './components/menu/pesponding-to-pulse-with-beat/pesponding-to-pulse-with-beat.component';
 import { PrivacyPolicyComponent } from './components/menu/privacy-policy/privacy-policy.component';
 import { TermOfUseComponent } from './components/menu/term-of-use/term-of-use.component';
@@ -27,7 +26,6 @@ import { TermOfUseComponent } from './components/menu/term-of-use/term-of-use.co
     MainNavComponent,
     LanguageOfPulseComponent,
     CreatingPulseComponent,
-    StartPageComponent,
     PespondingToPulseWithBeatComponent,
     PrivacyPolicyComponent,
     TermOfUseComponent
