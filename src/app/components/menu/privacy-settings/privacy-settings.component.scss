@@ -1,0 +1,31 @@
+body {
+  background-color: white;
+}
+h1 {
+  color: black;
+  text-align: left;
+  //font-family: Calibri, serif;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+h2 {
+  color: black;
+  text-align: left;
+  font-family: calibri, serif;
+  font-size: 16px
+}
+p {
+  //font-family: calibri, serif;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+ul{
+  list-style-type: disc;
+  list-style-position: outside;
+  font-family: calibri, serif;
+  font-size: 16px;
+  margin: 5px;
+}
+li{
+  padding: 5px;
+}
