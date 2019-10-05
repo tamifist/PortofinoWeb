@@ -10,6 +10,7 @@ from './components/menu/pesponding-to-pulse-with-beat/pesponding-to-pulse-with-b
 import {PrivacyPolicyComponent} from './components/menu/privacy-policy/privacy-policy.component';
 import {TermOfUseComponent} from './components/menu/term-of-use/term-of-use.component';
 import {PrivacySettingsComponent} from './components/menu/privacy-settings/privacy-settings.component';
+import {ManagingYourAccountComponent} from './components/menu/managing-your-account/managing-your-account.component';
 
 
 const menuRoutes: Routes = [
@@ -19,6 +20,7 @@ const menuRoutes: Routes = [
   { path: 'privacyPolicy', component: PrivacyPolicyComponent},
   { path: 'termOfUse', component: TermOfUseComponent},
   { path: 'privacySettings', component: PrivacySettingsComponent},
+  { path: 'managingYourAccount', component: ManagingYourAccountComponent},
 ];
 
 const routes: Routes = [

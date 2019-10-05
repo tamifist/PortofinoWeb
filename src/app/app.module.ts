@@ -19,6 +19,7 @@ import { PespondingToPulseWithBeatComponent } from './components/menu/pesponding
 import { PrivacyPolicyComponent } from './components/menu/privacy-policy/privacy-policy.component';
 import { TermOfUseComponent } from './components/menu/term-of-use/term-of-use.component';
 import { PrivacySettingsComponent } from './components/menu/privacy-settings/privacy-settings.component';
+import { ManagingYourAccountComponent } from './components/menu/managing-your-account/managing-your-account.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { PrivacySettingsComponent } from './components/menu/privacy-settings/pri
     PespondingToPulseWithBeatComponent,
     PrivacyPolicyComponent,
     TermOfUseComponent,
-    PrivacySettingsComponent
+    PrivacySettingsComponent,
+    ManagingYourAccountComponent
   ],
   imports: [
     BrowserModule,
