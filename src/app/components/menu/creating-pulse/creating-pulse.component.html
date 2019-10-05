@@ -1,22 +1,62 @@
 <ngb-carousel class="subMenuContext" *ngIf="!isHandset" #carousel interval="false" >
   <ng-template ngbSlide>
-    <div>
-      <div class="headerSubMenuLabel">What is my question or topic</div>
-      <img  style="margin-top: 100px; margin-left: 43px; width: 956px;" src="../../../../assets/images/CrearingPulse-1.PNG" >
+    <div >
+      <div >
+        <div class="headerSubMenu content-up-effect" >What is my question or topic</div>
+      </div>
+       <div class="bottomSubMenu">
+         <div>
+           <div class="headerSubMenuBottomText content-up-effect" >
+             <div>First,select the <img style="width: 24px;height: 24px" src="../../../../assets/images/ic_circled_plus@3x.png"/>  symbol form the Home screen.</div>
+             <div style="margin-top: 16px;" >Then select your Pulse topic category</div>
+           </div>
+           <img class="imageShadow"  style="height: 165px; margin-top: 254px;;" src="../../../../assets/images/Pulse_create_1.jpeg" />
+         </div>
+         <div>
+           <img class="arrowRightSubMenu"  style="margin-top: 278px;height: 115px;" src="../../../../assets/images/arrow-right-sub-menu.PNG" />
+         </div>
+         <div>
+           <img class="imageShadow"  style="height: 672px;margin-top: 72px;" src="../../../../assets/images/Pulse_create_2.jpeg" />
+         </div>
+       </div>
     </div>
   </ng-template>
   <ng-template ngbSlide>
-    <div>
-      <img class="content-up-effect"  style="position: absolute; top: 40px;left: 90px;width: 400px;" src="../../../../assets/images/WhoWhatAreMyChoice.PNG" >
-      <img  style="width: 1100px;margin-top: 80px; margin-left: 58px;"  src="../../../../assets/images/CreatingPulse-2.png" >
+    <div >
+      <div class="headerSubMenu content-up-effect" >Who/What are my choices</div>
+    </div>
+    <div class="bottomSubMenu">
+      <div style="position: relative">
+        <img class="imageShadow"  style="height: 672px;margin-top: 72px;" src="../../../../assets/images/Pulse_create_3.jpeg" />
+        <div class="redCircle" style="position: absolute;top:213px;right: -228px"> The best topics are those that engage your audience with clear distinct choices.Avoid questions that will likely create 'yes' or 'no' type responses</div>
+      </div>
+      <div>
+        <img class="arrowRightSubMenu"  style="margin-top: 408px;height: 115px; margin-left: 139px;" src="../../../../assets/images/arrow-right-sub-menu.PNG" />
+      </div>
+      <div>
+        <img class="imageShadow"  style="height: 672px;margin-top: 72px;margin-left: 139px;" src="../../../../assets/images/Pulse_create_4.jpeg" />
+      </div>
     </div>
   </ng-template>
-  <ng-template ngbSlide>
-    <div>
-      <img class="content-up-effect" style="position: absolute; top: 60px;left: 100px;"  src="../../../../assets/images/WhyiWouldSelectChoce.png" >
-      <img class="content-up-effect" style="position: absolute; top: 60px;left: 760px;"  src="../../../../assets/images/HowImportantIsEachThingToMe.png" >
-      <img  style="width: 1100px; margin-top: 106px; margin-left: 113px;"  src="../../../../assets/images/CreatingPulse-3.png" >
+  <ng-template  ngbSlide>
+    <div style="width: 1134px">
+    <div >
+      <div class="headerSubMenu content-up-effect" >Why would i select a choice?</div>
+      <div style="margin-left: 562px;" class="headerSubMenu content-up-effect" >How Important is each thing to me?</div>
     </div>
+    <div class="bottomSubMenu">
+      <div style="position: relative">
+        <img class="imageShadow"  style="height: 672px;margin-top: 72px;" src="../../../../assets/images/Pulse_create_4.jpeg" />
+        <div class="redCircle" style="position: absolute;width: 320px; height: 206px; top: 468px; right: -228px;">For the best results,your qualities should be either all positive traits or all negative traits.For example, if you are ranking attributes against political candidates,it would be clearer to have attributes such as [Trust, Competency,Integrity] as opposed to a mix of attributes such as [Trustworthy,Immoral,Competency,Sexist]</div>
+      </div>
+      <div>
+        <img class="arrowRightSubMenu"  style="margin-top: 356px;height: 115px; margin-left: 139px;" src="../../../../assets/images/arrow-right-sub-menu.PNG" />
+      </div>
+      <div>
+        <img class="imageShadow"  style="height: 672px;margin-top: 72px;margin-left: 139px;" src="../../../../assets/images/Pulse_create_5.jpeg" />
+      </div>
+    </div>
+    </div>>
   </ng-template>
   <ng-template ngbSlide>
     <div >
@@ -32,10 +72,10 @@
      src="./../../../assets/images/arrow-right.PNG" >
 
 
-<!--<div *ngIf="!isHandset" class="flex">-->
-<!--  <div [@extended]="showAnimation" class="extended" ></div>-->
-<!--  <div  [@narrowing]="showAnimation" class="narrowing" ></div>-->
-<!--</div>-->
+<div *ngIf="!isHandset" class="flex">
+  <div [@extended]="showAnimation" class="extended" ></div>
+  <div  [@narrowing]="showAnimation" class="narrowing" ></div>
+</div>
 
 
 
