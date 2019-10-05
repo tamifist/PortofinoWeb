@@ -1,6 +1,13 @@
-<div style="display: flex; flex-direction: row; justify-content: space-between;" >
-  <img  [ngClass]="{mobileStyleTruePulseLogo:isHandset}" style="width:160px;margin-left: 110px; margin-top: 35px;" src="../../../assets/images/truePulseLogo.PNG">
-  <div  [ngClass]="{mobileStyleTruePulseLogoInfo:isHandset}" style=" margin-top: 105px ;margin-right: 250px;"><a style="color: #0070c0!important; font-size: 20px;!important" href="mailto:info@truepulse.net">info@truepulse.net</a></div>
+<div *ngIf="isHandset" style="display: flex;flex-direction: row;justify-content: flex-end; margin-top: 10px;margin-right: 10px;">
+  <a style="color: #0070c0!important; font-size: 20px;!important" href="mailto:info@truepulse.net">info@truepulse.net</a></div>
+<div *ngIf="isHandset" style="display: flex;flex-direction: row;justify-content: center; align-items: center;margin-top: 30px;">
+  <img  style="width:160px;" src="../../../assets/images/truePulseLogo.PNG">
+</div>
+<div *ngIf="!isHandset" style="display: flex; flex-direction: row; justify-content: space-between;">
+  <img style="width:160px;margin-left: 110px; margin-top: 35px;" src="../../../assets/images/truePulseLogo.PNG">
+  <div style=" margin-top: 105px ;margin-right: 250px;">
+    <a style="color: #0070c0!important; font-size: 20px;!important" href="mailto:info@truepulse.net">info@truepulse.net</a>
+  </div>
 </div>
 <div  [ngClass]="{mobileStyleForMobile:isHandset}" style="position: relative;margin-top: 35px;">
   <img style="height: 360px" class="homeMainImage" src="../../../assets/images/Home_Main_image%20-%20Copy.jpg">
@@ -12,7 +19,7 @@
 
 <div [ngClass]="{mobileStyleCenterText:isHandset}" style=" display: flex; justify-content: center; color: #0096FF; font-weight: 500; font-size: 26px; text-align: center;  margin-top: 37px;">
   Is your opinion informed, a guess or your gut? <br>
-  You will be either lucky or wrong
+  You will be either lucky or wrong.
 
 </div>
 
@@ -38,6 +45,6 @@
   </div>
 </div>
 
-<div style="text-align: center; margin-top: 40px;">
+<div style="text-align: center; margin-top: 30px;">
   <img  routerLink="/menu/languageOfPulse" src="../../../assets/images/arrow-down.png"/>
 </div>
