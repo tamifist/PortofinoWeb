@@ -18,6 +18,7 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { PespondingToPulseWithBeatComponent } from './components/menu/pesponding-to-pulse-with-beat/pesponding-to-pulse-with-beat.component';
 import { PrivacyPolicyComponent } from './components/menu/privacy-policy/privacy-policy.component';
 import { TermOfUseComponent } from './components/menu/term-of-use/term-of-use.component';
+import { PrivacySettingsComponent } from './components/menu/privacy-settings/privacy-settings.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TermOfUseComponent } from './components/menu/term-of-use/term-of-use.co
     CreatingPulseComponent,
     PespondingToPulseWithBeatComponent,
     PrivacyPolicyComponent,
-    TermOfUseComponent
+    TermOfUseComponent,
+    PrivacySettingsComponent
   ],
   imports: [
     BrowserModule,

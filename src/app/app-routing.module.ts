@@ -9,6 +9,7 @@ import { PespondingToPulseWithBeatComponent }
 from './components/menu/pesponding-to-pulse-with-beat/pesponding-to-pulse-with-beat.component';
 import {PrivacyPolicyComponent} from './components/menu/privacy-policy/privacy-policy.component';
 import {TermOfUseComponent} from './components/menu/term-of-use/term-of-use.component';
+import {PrivacySettingsComponent} from './components/menu/privacy-settings/privacy-settings.component';
 
 
 const menuRoutes: Routes = [
@@ -17,6 +18,7 @@ const menuRoutes: Routes = [
   { path: 'respondingToPulseWithBeat', component: PespondingToPulseWithBeatComponent},
   { path: 'privacyPolicy', component: PrivacyPolicyComponent},
   { path: 'termOfUse', component: TermOfUseComponent},
+  { path: 'privacySettings', component: PrivacySettingsComponent},
 ];
 
 const routes: Routes = [
