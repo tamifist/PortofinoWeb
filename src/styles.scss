@@ -39,17 +39,51 @@ body { margin: 0; }
 
 .image-carousel-next {
   position: absolute;
-  top: 40%;
-  right: 0;
+  top: 34%;
+  right: 37px;
   z-index: 100;
+  height: 89px;
 }
-.headerSubMenuLabel {
+.headerSubMenu {
   color: #0070c0;
   font-size: 34px;
   font-weight: 500;
   letter-spacing: 0.1px;
 }
 .subMenuContext {
+  display: inline-block !important;
   margin-left: 64px;
   margin-top: 43px;
+}
+
+.headerSubMenuBottomText{
+  margin-top: 87px;
+  font-size: 20px;
+}
+
+.imageShadow {
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  margin-left: 15px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+
+.bottomSubMenu{
+  display: flex;
+}
+
+.arrowRightSubMenu {
+  height: 95px;
+}
+
+.redCircle{
+  background-color: red;
+  color: white;
+  width: 256px;
+  height: 133px;
+  text-align: center;
+  border-radius: 17px;
+  display: flex;
+  vertical-align: center;
+  line-height: 24px;
 }
