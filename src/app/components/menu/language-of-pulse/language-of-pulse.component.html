@@ -1,3 +1,23 @@
-<div >
-  <h6>A Pulse is posing a QUESTION</h6>
+<div [ngClass]="{mobileStyleContent:isHandset}" style="margin-left: 117px;margin-top: 48px;font-size: 36px;letter-spacing: 0.7px;width: 64%;">
+  <div >A Pulse is posing a QUESTION</div>
+  <div class="marginUp">A BEAT is answering a PULSE</div>
+  <div [ngClass]="{mobileStyleContentCenter:isHandset}" style="margin-top: 33px; margin-left: 144px; font-size: 33px; letter-spacing: 0.1px;">
+    <div >It's EASY!</div>
+    <div class="centerStyle" >It's Powerful!</div>
+    <div class="centerStyle">It's Fun!</div>
+  </div>
+  <div [ngClass]="{mobileStyleContentBottom:isHandset}" class="bottom">
+    <div class="row">
+      <div class="bottomText">Interested in <span class="circleNameBold"> getting</span> opinions?</div>
+      <div class="circle" ><span class="circleName">Create a <span class="circleNameBold"> Pulse</span></span></div>
+    </div>
+    <div class="row" style="margin-top: 55px">
+      <div class="bottomText">Interested in <span class="circleNameBold"> giving</span> opinions?</div>
+      <div class="circle" style=" background-color: #FF9933;" ><span class="circleName">Respond with a <span class="circleNameBold"> Beat</span></span></div>
+    </div>
+    <div class="row" style="margin-top: 55px">
+      <div class="bottomText">Interested in <span class="circleNameBold"> understanding</span><br/> opinions?</div>
+      <div class="circle" style=" background-color: #92D050"  ><span class="circleName">Look at an <span class="circleNameBold"> Insight</span></span></div>
+    </div>
+  </div>
 </div>

@@ -1,3 +1,54 @@
-:host {
-  font-family: 'Roboto', sans-serif;
+.marginUp {
+  margin-top: 31px;
+}
+
+.centerStyle {
+  margin-top: 10px;
+}
+
+.circle {
+  background-color: #0096FF;
+  width: 423px;
+  border-radius: 21px;
+  height: 55px;
+  margin-left: 44px;
+}
+
+.circleName {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-style: italic;
+  letter-spacing: 4px;
+}
+
+.circleNameBold {
+  font-weight: bolder;
+}
+
+.bottomText {
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.bottom {
+  margin-top: 58px;
+}
+
+.row {
+  justify-content: space-between;
+}
+
+.mobileStyleContent {
+  margin-top: 48px !important;
+  font-size: 29px !important;
+  letter-spacing: 0.7px !important;
+  text-align: center !important;
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+  width: 88% !important;
+}
+
+.mobileStyleContentCenter{
+  margin-left: 0 !important;
 }
