@@ -20,24 +20,27 @@
 // custom style
 mat-sidenav {
   position:absolute;
-  background-color: #FFFFFF;
+  background-color: #F2F2F2;
   border-right: 5px solid #7F7F7F;
 }
 
 ::ng-deep .mat-list-item-content {
   text-decoration: underline;
   color: #0096FF !important;
+  letter-spacing: 1.0px;
+  font-size: 18px;
 }
 
 ::ng-deep .mat-list-item-content {
   &.active{
     font-weight: bolder;
-    font-size: 18px;
+    font-size: 19px;
+    letter-spacing: 0.6px;
    }
 }
 
 ::ng-deep .desktopStyle {
-  margin-left: 20px;
-  margin-top: 20px;
+  margin-left: 50px;
+  margin-top: 50px;
 }
 

@@ -8,10 +8,11 @@
 
 .circle {
   background-color: #0096FF;
-  width: 423px;
-  border-radius: 21px;
+  width: 460px;
+  border-radius: 30px;
   height: 55px;
-  margin-left: 44px;
+  margin-left: 17px;
+  margin-top: 15px;
 }
 
 .circleName {
@@ -19,11 +20,12 @@
   justify-content: center;
   color: white;
   font-style: italic;
-  letter-spacing: 4px;
+  letter-spacing: 1px;
 }
 
 .circleNameBold {
   font-weight: bolder;
+  margin-left: 10px;
 }
 
 .bottomText {
