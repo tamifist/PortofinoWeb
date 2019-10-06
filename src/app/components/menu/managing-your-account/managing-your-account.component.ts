@@ -14,9 +14,9 @@ export class ManagingYourAccountComponent extends BaseComponent implements OnIni
   showNextScreen = true;
   @ViewChild(NgbCarousel, {static : false }) NgbCarouselElement: NgbCarousel ;
 
-  constructor(protected breakpointObserver: BreakpointObserver) {
-    super(breakpointObserver);
-  }
+  // constructor(protected breakpointObserver: BreakpointObserver) {
+  //   super(breakpointObserver);
+  // }
 
   ngOnInit() {
   }

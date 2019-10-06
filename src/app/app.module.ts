@@ -23,6 +23,8 @@ import { ManagingYourAccountComponent } from './components/menu/managing-your-ac
 import { PulseForCorporatesComponent } from './components/menu/pulse-for-corporates/pulse-for-corporates.component';
 import { EnjoingLivePulseComponent } from './components/menu/enjoing-live-pulse/enjoing-live-pulse.component';
 import {BaseComponent} from './components/base/base.component';
+// tslint:disable-next-line:max-line-length
+import { FindingYourWayAroundPulseAppComponent } from './components/menu/finding-your-way-around-pulse-app/finding-your-way-around-pulse-app.component';
 import { DataAndInsightFromPulsesComponent } from './components/menu/data-and-insight-from-pulses/data-and-insight-from-pulses.component';
 
 @NgModule({
@@ -38,6 +40,8 @@ import { DataAndInsightFromPulsesComponent } from './components/menu/data-and-in
     PrivacySettingsComponent,
     ManagingYourAccountComponent,
     PulseForCorporatesComponent,
+    BaseComponent,
+    FindingYourWayAroundPulseAppComponent,
     EnjoingLivePulseComponent,
     BaseComponent,
     DataAndInsightFromPulsesComponent

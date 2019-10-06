@@ -12,6 +12,8 @@ import {TermOfUseComponent} from './components/menu/term-of-use/term-of-use.comp
 import {PrivacySettingsComponent} from './components/menu/privacy-settings/privacy-settings.component';
 import {ManagingYourAccountComponent} from './components/menu/managing-your-account/managing-your-account.component';
 import {PulseForCorporatesComponent} from './components/menu/pulse-for-corporates/pulse-for-corporates.component';
+// tslint:disable-next-line:max-line-length
+import {FindingYourWayAroundPulseAppComponent} from './components/menu/finding-your-way-around-pulse-app/finding-your-way-around-pulse-app.component';
 import {EnjoingLivePulseComponent} from './components/menu/enjoing-live-pulse/enjoing-live-pulse.component';
 import {DataAndInsightFromPulsesComponent} from './components/menu/data-and-insight-from-pulses/data-and-insight-from-pulses.component';
 
@@ -27,6 +29,7 @@ const menuRoutes: Routes = [
   { path: 'pulseForCorporates', component: PulseForCorporatesComponent},
   { path: 'enjoyingLivePulse', component: EnjoingLivePulseComponent},
   { path: 'dataAndInsightsFromPulses', component: DataAndInsightFromPulsesComponent},
+  { path: 'findingYourWayAroundPulseApp', component: FindingYourWayAroundPulseAppComponent},
 ];
 
 const routes: Routes = [

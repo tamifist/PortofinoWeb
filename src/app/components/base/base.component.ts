@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
   template: ''
 })
 export class BaseComponent {
-  isHandset: boolean;
+  protected isHandset: boolean;
 
   constructor(protected  breakpointObserver: BreakpointObserver) {
     this.breakpointObserver.observe(Breakpoints.Handset)
