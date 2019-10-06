@@ -13,6 +13,7 @@ import {PrivacySettingsComponent} from './components/menu/privacy-settings/priva
 import {ManagingYourAccountComponent} from './components/menu/managing-your-account/managing-your-account.component';
 import {PulseForCorporatesComponent} from './components/menu/pulse-for-corporates/pulse-for-corporates.component';
 import {EnjoingLivePulseComponent} from './components/menu/enjoing-live-pulse/enjoing-live-pulse.component';
+import {DataAndInsightFromPulsesComponent} from './components/menu/data-and-insight-from-pulses/data-and-insight-from-pulses.component';
 
 
 const menuRoutes: Routes = [
@@ -25,6 +26,7 @@ const menuRoutes: Routes = [
   { path: 'managingYourAccount', component: ManagingYourAccountComponent},
   { path: 'pulseForCorporates', component: PulseForCorporatesComponent},
   { path: 'enjoyingLivePulse', component: EnjoingLivePulseComponent},
+  { path: 'dataAndInsightsFromPulses', component: DataAndInsightFromPulsesComponent},
 ];
 
 const routes: Routes = [

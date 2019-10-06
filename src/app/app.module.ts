@@ -23,6 +23,7 @@ import { ManagingYourAccountComponent } from './components/menu/managing-your-ac
 import { PulseForCorporatesComponent } from './components/menu/pulse-for-corporates/pulse-for-corporates.component';
 import { EnjoingLivePulseComponent } from './components/menu/enjoing-live-pulse/enjoing-live-pulse.component';
 import {BaseComponent} from './components/base/base.component';
+import { DataAndInsightFromPulsesComponent } from './components/menu/data-and-insight-from-pulses/data-and-insight-from-pulses.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import {BaseComponent} from './components/base/base.component';
     ManagingYourAccountComponent,
     PulseForCorporatesComponent,
     EnjoingLivePulseComponent,
-    BaseComponent
+    BaseComponent,
+    DataAndInsightFromPulsesComponent
   ],
   imports: [
     BrowserModule,
