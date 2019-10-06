@@ -5,26 +5,3 @@
   height: 100%;
   background-color: #FFFFFF
 }
-
-
-::ng-deep .carousel-control-prev {
-  display: none;
-}
-
-::ng-deep .carousel-control-next {
-  display: none;
-}
-
-::ng-deep  .carousel-indicators {
-  display: none;
-}
-
-::ng-deep .content-up-effect {
-  z-index: 100;
-  position: absolute;
-}
-
-::ng-deep .mobileStyle {
-  width: 11%;
-  margin-right: 10px;
-}

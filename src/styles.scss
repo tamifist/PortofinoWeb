@@ -107,3 +107,29 @@ body { margin: 0; }
 .mobileStylePreviousArray{
   left: 0 !important;
 }
+
+.carousel-control-prev {
+  display: none;
+}
+
+ .carousel-control-next {
+  display: none;
+}
+
+  .carousel-indicators {
+  display: none;
+}
+
+ .content-up-effect {
+  z-index: 100;
+  position: absolute;
+}
+
+.mobileStyle {
+  width: 11%;
+  margin-right: -37px;
+}
+
+.arrowRightBold {
+  height: 96px;
+}
