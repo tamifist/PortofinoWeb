@@ -20,6 +20,7 @@ import { PrivacyPolicyComponent } from './components/menu/privacy-policy/privacy
 import { TermOfUseComponent } from './components/menu/term-of-use/term-of-use.component';
 import { PrivacySettingsComponent } from './components/menu/privacy-settings/privacy-settings.component';
 import { ManagingYourAccountComponent } from './components/menu/managing-your-account/managing-your-account.component';
+import { PulseForCorporatesComponent } from './components/menu/pulse-for-corporates/pulse-for-corporates.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ManagingYourAccountComponent } from './components/menu/managing-your-ac
     PrivacyPolicyComponent,
     TermOfUseComponent,
     PrivacySettingsComponent,
-    ManagingYourAccountComponent
+    ManagingYourAccountComponent,
+    PulseForCorporatesComponent
   ],
   imports: [
     BrowserModule,
