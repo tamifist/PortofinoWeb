@@ -54,3 +54,39 @@
   <div [@extended]="showAnimation" class="extended" ></div>
   <div  [@narrowing]="showAnimation" class="narrowing" ></div>
 </div>
+
+<ngb-carousel *ngIf="isHandset" #carousel interval="false" >
+  <ng-template ngbSlide>
+    <div style="text-align: center; margin: 10px; display: flex; flex-direction: column; align-items: center;" >
+      <div class="bottomSubMenu" style="justify-content: center">
+        <div>
+          <div style="font-size: 15px; margin-top: 29px;" class="headerSubMenuBottomText " >
+            <div ><b>If you wish to create a Live Pulse, please email <a href="mailto:info@truepulse.net">support@truepulse.net </a></b></div>
+          </div>
+        </div>
+      </div>
+      <img class="imageShadow" style="width: 262px; margin-top: 58px;" src="../../../../assets/images/Live_Pulse_1.jpeg" >
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div style="text-align: center; margin: 10px" >
+      <div >
+        <div class="headerSubMenu" [ngClass]="{mobileHeaderSubMenu:isHandset}" >Select A Live Event</div>
+      </div>
+      <img class="imageShadow" style="width: 262px; margin-top: 128px;" src="./../../../assets/images/Live_Pulse_1.jpeg" >
+
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div style="text-align: center; margin: 10px; display: flex; flex-direction: column; align-items: center;" >
+      <div class="bottomSubMenu" style="justify-content: center">
+        <div>
+          <div style="font-size: 15px; margin-top: -15px;" class="headerSubMenuBottomText " >
+            <div >At the scheduled time and as the event is about to start, come back to the Live Pulse listing page and select the specific Live Pulse. This will take you to the Live Pulse participation page.</div>
+          </div>
+        </div>
+      </div>
+      <img class="imageShadow" style="width: 262px; margin-top: 58px;" src="../../../../assets/images/Live_Pulse_1.jpeg" >
+    </div>
+  </ng-template>
+</ngb-carousel>
