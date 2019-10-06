@@ -1,14 +1,13 @@
-import { AfterViewInit, Component, OnInit, ViewChild, } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
-import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {animate, state, style, transition, trigger} from '@angular/animations';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import {map, shareReplay} from 'rxjs/operators';
-import {Router} from '@angular/router';
+import {NgbCarousel} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-creating-pulse',
-  templateUrl: './creating-pulse.component.html',
-  styleUrls: ['./creating-pulse.component.scss'],
+  selector: 'app-enjoing-live-pulse',
+  templateUrl: './enjoing-live-pulse.component.html',
+  styleUrls: ['./enjoing-live-pulse.component.scss'],
   animations: [
     trigger('extended', [
       state('start', style({
@@ -34,7 +33,7 @@ import {Router} from '@angular/router';
     ]),
   ],
 })
-export class CreatingPulseComponent implements OnInit  {
+export class EnjoingLivePulseComponent implements OnInit {
   showAnimation = 'start';
   isHandset: boolean;
   showNextScreen = true;
@@ -70,8 +69,8 @@ export class CreatingPulseComponent implements OnInit  {
     this.NgbCarouselElement.next();
 
     setTimeout(() => {
-     this.showAnimation = 'end';
-   });
+      this.showAnimation = 'end';
+    });
   }
 
   carouselPrevious() {
@@ -94,4 +93,5 @@ export class CreatingPulseComponent implements OnInit  {
       this.showAnimation = 'end';
     });
   }
+
 }

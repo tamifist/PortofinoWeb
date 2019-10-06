@@ -21,6 +21,7 @@ import { TermOfUseComponent } from './components/menu/term-of-use/term-of-use.co
 import { PrivacySettingsComponent } from './components/menu/privacy-settings/privacy-settings.component';
 import { ManagingYourAccountComponent } from './components/menu/managing-your-account/managing-your-account.component';
 import { PulseForCorporatesComponent } from './components/menu/pulse-for-corporates/pulse-for-corporates.component';
+import { EnjoingLivePulseComponent } from './components/menu/enjoing-live-pulse/enjoing-live-pulse.component';
 import {BaseComponent} from './components/base/base.component';
 
 @NgModule({
@@ -36,6 +37,7 @@ import {BaseComponent} from './components/base/base.component';
     PrivacySettingsComponent,
     ManagingYourAccountComponent,
     PulseForCorporatesComponent,
+    EnjoingLivePulseComponent,
     BaseComponent
   ],
   imports: [
