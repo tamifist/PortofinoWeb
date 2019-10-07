@@ -10,7 +10,6 @@ import {BaseComponent} from '../../base/base.component';
   styleUrls: ['./managing-your-account.component.scss']
 })
 export class ManagingYourAccountComponent extends BaseComponent implements OnInit {
-  isHandset: boolean;
   showNextScreen = true;
   @ViewChild(NgbCarousel, {static : false }) NgbCarouselElement: NgbCarousel ;
 
