@@ -1,23 +1,59 @@
-<div [ngClass]="{mobileStyleContent:isHandset}" style="margin-left: 117px;margin-top: 48px;margin-bottom: 60px;font-size: 36px;letter-spacing: 0.7px;width: 70%;">
-  <div >A Pulse is posing a QUESTION</div>
-  <div class="marginUp">A BEAT is answering a PULSE</div>
-  <div [ngClass]="{mobileStyleContentCenter:isHandset}" style="margin-top: 33px; margin-left: 144px; font-size: 33px; letter-spacing: 0.1px;">
-    <div >It's EASY!</div>
-    <div class="centerStyle" >It's Powerful!</div>
-    <div class="centerStyle">It's Fun!</div>
+<div class="text-language-of-pulse" [ngClass]="{'marginUpDesktop': !isHandset}">
+  <div class="row">
+    <div class="col-xl-8 text-center">
+      <p>A Pulse is posing a QUESTION</p>
+      <p>A BEAT is answering a PULSE</p>
+      <p>It's EASY!</p>
+      <p>It's Powerful!</p>
+      <p>It's Fun!</p>
+    </div>
   </div>
-  <div [ngClass]="{mobileStyleContentBottom:isHandset}" class="bottom">
-    <div class="row">
-      <div class="bottomText">Interested in <span class="circleNameBold"> getting</span> opinions?</div>
-      <div class="circle" ><span class="circleName">Create a <span class="circleNameBold"> Pulse</span></span></div>
+  <div class="row justify-content-start badge-row-spacing">
+    <div class="col-xl-6" [ngClass]="{
+    'flex-end': !isHandset,
+    'flex-center': isHandset
+  }">
+      <div>Interested in <span class="font-weight-bold">getting</span> opinions?</div>
     </div>
-    <div class="row" style="margin-top: 55px">
-      <div class="bottomText">Interested in <span class="circleNameBold"> giving</span> opinions?</div>
-      <div class="circle" style=" background-color: #FF9933;" ><span class="circleName">Respond with a <span class="circleNameBold"> Beat</span></span></div>
+    <div class="col-xl-5" [ngClass]="{
+    'flex-start': !isHandset,
+    'flex-center': isHandset
+  }">
+      <div class="rounded-corners-rect color-blue flex-center">
+        <div class="text-badge">Create a <span class="font-weight-bold"> Pulse</span></div>
+      </div>
     </div>
-    <div class="row" style="margin-top: 55px">
-      <div class="bottomText">Interested in <span class="circleNameBold"> understanding</span><br/> opinions?</div>
-      <div class="circle" style=" background-color: #92D050"  ><span class="circleName">Look at an <span class="circleNameBold"> Insight</span></span></div>
+  </div>
+  <div class="row justify-content-start badge-row-spacing">
+    <div class="col-xl-6" [ngClass]="{
+    'flex-end': !isHandset,
+    'flex-center': isHandset
+  }">
+      <div>Interested in <span class="font-weight-bold"> giving</span> opinions?</div>
+    </div>
+    <div class="col-xl-5" [ngClass]="{
+    'flex-start': !isHandset,
+    'flex-center': isHandset
+  }">
+      <div class="rounded-corners-rect color-yellow flex-center">
+        <div class="text-badge">Respond with a <span class="font-weight-bold"> Beat</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-start badge-row-spacing">
+    <div class="col-xl-6" [ngClass]="{
+    'flex-end': !isHandset,
+    'flex-center': isHandset
+  }">
+      <div>Interested in <span class="font-weight-bold"> understanding</span> opinions?</div>
+    </div>
+    <div class="col-xl-5" [ngClass]="{
+    'flex-start': !isHandset,
+    'flex-center': isHandset
+  }">
+      <div class="rounded-corners-rect color-green flex-center">
+        <div class="text-badge">Look at an <span class="font-weight-bold"> Insight</span></div>
+      </div>
     </div>
   </div>
 </div>

@@ -4,7 +4,7 @@
  }
 
 .sidenav {
-  width: 532px;
+  width: 332px;
 }
 
 .sidenav .mat-toolbar {
@@ -27,20 +27,20 @@ mat-sidenav {
 ::ng-deep .mat-list-item-content {
   text-decoration: underline;
   color: #0096FF !important;
-  letter-spacing: 1.0px;
-  font-size: 18px;
+  //letter-spacing: 1.0px;
+  //font-size: 18px;
 }
 
 ::ng-deep .mat-list-item-content {
   &.active{
     font-weight: bolder;
-    font-size: 19px;
-    letter-spacing: 0.6px;
+    //font-size: 19px;
+    //letter-spacing: 0.6px;
    }
 }
 
 ::ng-deep .desktopStyle {
-  margin-left: 50px;
-  margin-top: 50px;
+  //margin-left: 50px;
+  //margin-top: 50px;
 }
 
