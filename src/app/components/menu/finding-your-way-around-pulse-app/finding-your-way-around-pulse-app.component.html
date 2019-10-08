@@ -1,6 +1,9 @@
 <ngb-carousel interval="false" >
   <ng-template ngbSlide>
-    <div class="menu-content-wrapper" [ngClass]="{'menu-content-margin-left':!isHandset}">
+    <div class="menu-content-wrapper" [ngClass]="{
+      'menu-content-margin--desktop':!isHandset,
+      'menu-content-margin--mobile':isHandset
+      }">
       <h6>Home Screen</h6>
       <p>
         Upon logging into the Pulse mobile app, the Home screen is your landing page. The Home screen is your Pulse topic feed.<br/> The feed is based on your topic preferences, your previous Pulse participation and sponsored Pulse topics.
@@ -10,7 +13,10 @@
     </div>
   </ng-template>
   <ng-template ngbSlide>
-    <div class="menu-content-wrapper" [ngClass]="{'menu-content-margin-left':!isHandset}">
+    <div class="menu-content-wrapper" [ngClass]="{
+      'menu-content-margin--desktop':!isHandset,
+      'menu-content-margin--mobile':isHandset
+      }">
       <p>
         Each Pulse topic on the Home screen displays specific information about that Pulse. From top to bottom:
       </p>
@@ -39,7 +45,10 @@
     </div>
   </ng-template>
   <ng-template ngbSlide>
-    <div class="menu-content-wrapper" [ngClass]="{'menu-content-margin-left':!isHandset}">
+    <div class="menu-content-wrapper" [ngClass]="{
+      'menu-content-margin--desktop':!isHandset,
+      'menu-content-margin--mobile':isHandset
+      }">
       <h5>Trending Screen</h5>
       <p>
         The Trending  screen shows all Pulses that have had the most activity in the last 7 days. Activity is represented by Beats.
@@ -67,5 +76,5 @@
 <img *ngIf="showPreviousScreen" class="image-carousel-previous"
      (click)="carouselPrevious()"
      [ngClass]="{mobileStyle:isHandset, mobileStylePreviousArray:isHandset}"
-     src="./../../../assets/images/arrow-left.png " >
+     src="./../../../assets/images/arrow-left.png" >
 

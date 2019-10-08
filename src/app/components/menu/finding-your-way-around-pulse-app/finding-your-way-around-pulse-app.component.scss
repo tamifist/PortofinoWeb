@@ -3,7 +3,12 @@
   margin: 20px;
 }
 
-.menu-content-margin-left {
+.menu-content-margin--mobile {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.menu-content-margin--desktop {
   margin-left: 100px;
 }
 
