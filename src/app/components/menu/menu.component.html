@@ -31,20 +31,20 @@
   </div>
 
   <div [ngClass]="{mobileStyleBottomContent:isHandset}" class="row" style="display: flex;justify-content: center; margin-top: 36px;margin-left: 0;margin-right: 0">
-    <a href="/menu/creatingPulse#bottom"  [ngClass]="{mobileStyleImage:isHandset}" class=" desktopBottomImage">
+    <div (click)="navigate('/menu/creatingPulse')" [ngClass]="{mobileStyleImage:isHandset}" class=" desktopBottomImage">
       <div [ngClass]="{mobileBottomImageTopText:isHandset}" class="desktopBottomImageTopText">You want to be heard!</div>
       <div [ngClass]="{mobileBottomImageBottomText:isHandset}" class="desktopBottomImageBottomText">Create a Pulse</div>
       <img [ngClass]="{mobileTopImageFace:isHandset}" class="desktopTopImageFace" src="../../../assets/images/face5a_circle.png"/>
       <div style="position: absolute; bottom: -26px; left: 11px;color: #7F7F7F;" >Learn more...</div>
-    </a>
+    </div>
 
-    <a  href="/menu/respondingToPulseWithBeat#bottom" [ngClass]="{mobileStyleImage:isHandset}" class=" desktopBottomImage">
+    <a  (click)="navigate('/menu/respondingToPulseWithBeat')"  [ngClass]="{mobileStyleImage:isHandset}" class=" desktopBottomImage">
       <div [ngClass]="{mobileBottomImageTopText:isHandset}"  class="desktopBottomImageTopText">You want your opinion to <br> count! </div>
       <div [ngClass]="{mobileBottomImageBottomText:isHandset}" class="desktopBottomImageBottomText">Respond with a Beat</div>
       <img [ngClass]="{mobileTopImageFace:isHandset}" class="desktopTopImageFace" src="../../../assets/images/face4a_circle.png"/>
       <div style="position: absolute; bottom: -26px; left: 11px;color: #7F7F7F;" >Learn more...</div>
     </a>
-    <a href="/menu/dataAndInsightsFromPulses#bottom" [ngClass]="{mobileStyleImage:isHandset}" class=" desktopBottomImage">
+    <a  (click)="navigate('/menu/dataAndInsightsFromPulses')"  [ngClass]="{mobileStyleImage:isHandset}" class=" desktopBottomImage">
       <div [ngClass]="{mobileBottomImageTopText:isHandset}" class="desktopBottomImageTopText">You want to make a <br> Difference</div>
       <div [ngClass]="{mobileBottomImageBottomText:isHandset}" class="desktopBottomImageBottomText">Look at an Insight</div>
       <img [ngClass]="{mobileTopImageFace:isHandset}" class="desktopTopImageFace" src="../../../assets/images/face7a_circle.png"/>

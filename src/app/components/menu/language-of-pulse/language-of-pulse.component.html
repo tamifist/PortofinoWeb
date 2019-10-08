@@ -19,7 +19,7 @@
     'flex-start': !isHandset,
     'flex-center': isHandset
   }">
-      <a href="/menu/creatingPulse#bottom" class="rounded-corners-rect color-blue flex-center">
+      <a  (click)="navigate('/menu/creatingPulse')"   class="rounded-corners-rect color-blue flex-center">
         <div class="text-badge">Create a <span class="font-weight-bold"> Pulse</span></div>
       </a>
     </div>
@@ -35,7 +35,7 @@
     'flex-start': !isHandset,
     'flex-center': isHandset
   }">
-      <a href="/menu/respondingToPulseWithBeat#bottom" class="rounded-corners-rect color-yellow flex-center">
+      <a (click)="navigate('/menu/respondingToPulseWithBeat')"  class="rounded-corners-rect color-yellow flex-center">
         <div class="text-badge">Respond with a <span class="font-weight-bold"> Beat</span></div>
       </a>
     </div>
@@ -51,7 +51,7 @@
     'flex-start': !isHandset,
     'flex-center': isHandset
   }">
-      <a href="/menu/dataAndInsightsFromPulses#bottom"  class="rounded-corners-rect color-green flex-center">
+      <a (click)="navigate('/menu/dataAndInsightsFromPulses')"   class="rounded-corners-rect color-green flex-center">
         <div class="text-badge">Look at an <span class="font-weight-bold"> Insight</span></div>
       </a>
     </div>
