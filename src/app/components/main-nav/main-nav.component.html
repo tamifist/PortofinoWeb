@@ -1,10 +1,11 @@
+<a  name="bottom"></a>
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport
       [attr.role]="(isHandset) ? 'dialog' : 'navigation'"
       [mode]="(isHandset) ? 'over' : 'side'"
       [opened]="(isHandset) === false">
-    <mat-nav-list [ngClass]="{desktopStyle:!isHandset}"
-                  (click)="changeClassForMenu($event)">
+    <div #matnavlist>
+    <mat-nav-list  [ngClass]="{desktopStyle:!isHandset}" >
       <a mat-list-item
          (click)="(isHandset) && drawer.close()"
          routerLink="languageOfPulse" >The Language of Pulse</a>
@@ -41,6 +42,7 @@
          (click)="(isHandset) && drawer.close()"
          routerLink="termOfUse">Terms of Use</a>
     </mat-nav-list>
+    </div>
   </mat-sidenav>
   <mat-sidenav-content style="background-color: #FFFFFF">
       <button
