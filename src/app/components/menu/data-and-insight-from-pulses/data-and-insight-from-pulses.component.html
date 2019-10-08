@@ -1,22 +1,125 @@
-<div style="display: flex;justify-content: center">
-  <ngb-carousel class="subMenuContext" *ngIf="!isHandset" #carousel interval="false" >
-    <ng-template ngbSlide>
-      <div  style="display: flex; margin-left: 120px;">
-        <div >
-          <img class="imageShadow"  style="height: 672px;margin-top: 67px;" src="../../../../assets/images/Live_Pulse_3.jpg" />
+<ngb-carousel interval="false" >
+  <ng-template ngbSlide>
+    <div class="menu-content-wrapper" [ngClass]="{
+      'menu-content-margin--desktop':!isHandset,
+      'menu-content-margin--mobile':isHandset
+      }">
+      <h5>Interested in understanding opinions?...</h5>
+      <h5>Look at an Insight</h5>
+      <p>From the Home, Trending and My Pulse screens, you can tap on any Pulse topic. This will navigate you to a detailed Pulse screen.</p>
+      <div class="row">
+        <div class="col-lg-4" [ngClass]="{
+          'flex-center order-2': isHandset,
+          'order-1 flex-end': !isHandset
+        }">
+          <img class="imageShadow slide-image--large" src="../../../../assets/images/Insights_1.jpeg" />
         </div>
-        <div style="width: 868px;margin-top: 183px;">
-          <div style="margin-left: 26px;width: 505px;" >At the scheduled time and as the event is about to start, come back to the Live Pulse listing page and select the specific Live Pulse. This will take you to the Live Pulse participation page.</div>
-          <div>
-            <div class="headerSubMenu enjoyingStyleButtonText" style="margin-top: 71px;">Select a participant. </div>
-            <div class="headerSubMenu enjoyingStyleButtonText" style="margin-top: 43px; width: 681px;">Tap an emoji to express an emotion during the live event.
-              Repeat as often as you like for each participant.
-            </div>
-            <div class="headerSubMenu enjoyingStyleButtonText" style="margin-top: 43px;">Watch what the world thinks in real-time. </div>
-            <div class="headerSubMenu enjoyingStyleButtonText" style="margin-top: 62px;">Add comments as often as you like. </div>
-          </div>
+        <div class="col-lg-8" [ngClass]="{
+            'flex-center order-1': isHandset,
+            'order-2 flex-start': !isHandset
+          }">
+          <h6>Tap on the ‘Insights’ icon</h6>
         </div>
       </div>
-    </ng-template>
-  </ngb-carousel>
-</div>
+<!--      <div style="position: relative;">-->
+<!--        <div style="margin-top: 30px;">-->
+<!--          <img class="imageShadow slide-image&#45;&#45;large" src="../../../../assets/images/Insights_1.jpeg" />-->
+<!--        </div>-->
+<!--        <h6 [ngStyle]="{-->
+<!--          position: 'absolute',-->
+<!--          top: isHandset ? '-20px' : '125px',-->
+<!--          left: isHandset ? '40px' : '270px'-->
+<!--        }">-->
+<!--          Tap on the ‘Insights’ icon-->
+<!--        </h6>-->
+<!--      </div>-->
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="menu-content-wrapper" [ngClass]="{
+      'menu-content-margin--desktop':!isHandset,
+      'menu-content-margin--mobile':isHandset
+      }">
+      <div class="row">
+        <div class="col-lg-4" [ngClass]="{
+          'flex-center order-2': isHandset,
+          'order-1 flex-end': !isHandset
+        }">
+          <img class="imageShadow slide-image--large" src="../../../../assets/images/Insights_2.jpeg" />
+        </div>
+        <div class="col-lg-8" [ngClass]="{
+            'flex-center order-1': isHandset,
+            'order-2 flex-start': !isHandset
+          }">
+          <h6>What were your choices?</h6>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4" [ngClass]="{
+          'flex-center order-2': isHandset,
+          'order-1 flex-end': !isHandset
+        }">
+          <img class="imageShadow slide-image--large" src="../../../../assets/images/Insights_3.jpeg" />
+        </div>
+        <div class="col-lg-8 flex-column-start" [ngClass]="{
+            'order-1': isHandset,
+            'order-2': !isHandset
+          }">
+          <h6>How strong were your preferences?</h6>
+          <p>The weighted scores indicate the extent to which one Choice was preferred over another. For example, a Pulse might indicate that 51% of users preferred Choice A over Choice B. However the weighted scores might tell us that the 51% were absolute in their conviction with Choice A over Choice B.
+          </p>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="menu-content-wrapper" [ngClass]="{
+      'menu-content-margin--desktop':!isHandset,
+      'menu-content-margin--mobile':isHandset
+      }">
+      <div class="row">
+        <div class="col-lg-4" [ngClass]="{
+          'flex-center order-2': isHandset,
+          'order-1 flex-end': !isHandset
+        }">
+          <img class="imageShadow slide-image--large" src="../../../../assets/images/Insights_4.jpeg" />
+        </div>
+        <div class="col-lg-8 flex-column-start" [ngClass]="{
+            'order-1': isHandset,
+            'order-2': !isHandset
+          }">
+          <h6>What was important to you?</h6>
+          <p>In Creating a Beat, you have the option of adjusting weightings of each attribute based on what you feel is important to you. Each user will most likely have a different view of what qualities (attributes) are important to them. This visual represents an average of all the user adjusted weightings for each attribute.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4" [ngClass]="{
+          'flex-center order-2': isHandset,
+          'order-1 flex-end': !isHandset
+        }">
+          <img class="imageShadow slide-image--large" src="../../../../assets/images/Insights_5.png" />
+        </div>
+        <div class="col-lg-8 flex-column-start" [ngClass]="{
+            'order-1': isHandset,
+            'order-2': !isHandset
+          }">
+          <h6>Where did users participate in this Pulse
+          </h6>
+          <p>Each circle doubles as a traffic light (red, amber, green) indicating overall user sentiment in that area. The size of the circle represents the relative number of users.
+          </p>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+<img *ngIf="showNextScreen" class="image-carousel-next"
+     (click)="carouselNext()"
+     [ngClass]="{mobileStyle:isHandset}"
+     src="./../../../assets/images/arrow-right.PNG" >
+
+<img *ngIf="showPreviousScreen" class="image-carousel-previous"
+     (click)="carouselPrevious()"
+     [ngClass]="{mobileStyle:isHandset, mobileStylePreviousArray:isHandset}"
+     src="./../../../assets/images/arrow-left.png " >

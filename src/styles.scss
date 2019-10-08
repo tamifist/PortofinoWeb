@@ -150,3 +150,59 @@ margin-right: -37px;
 .arrowRightBold {
 height: 70px;
 }
+
+.menu-content-wrapper {
+  font-family: 'Roboto';
+  margin: 20px;
+}
+
+.menu-content-margin--mobile {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.menu-content-margin--desktop {
+  margin-left: 100px;
+}
+
+h5 {
+  color: #0070c0;
+}
+
+.color-blue {
+  background-color: #0096FF;
+}
+
+.color-yellow {
+  background-color: #FF9933;
+}
+
+.color-green {
+  background-color: #92D050;
+}
+
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-column-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+

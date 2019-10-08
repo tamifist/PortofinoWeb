@@ -2,29 +2,19 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {NgbCarousel} from '@ng-bootstrap/ng-bootstrap';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import {map, shareReplay} from 'rxjs/operators';
+import {BaseComponent} from '../../base/base.component';
 
 @Component({
   selector: 'app-data-and-insight-from-pulses',
   templateUrl: './data-and-insight-from-pulses.component.html',
   styleUrls: ['./data-and-insight-from-pulses.component.scss']
 })
-export class DataAndInsightFromPulsesComponent implements OnInit {
+export class DataAndInsightFromPulsesComponent extends BaseComponent implements OnInit {
 
   showAnimation = 'start';
-  isHandset: boolean;
   showNextScreen = true;
   showPreviousScreen = false;
   @ViewChild(NgbCarousel, {static : false }) NgbCarouselElement: NgbCarousel ;
-
-  constructor(private breakpointObserver: BreakpointObserver) {
-    this.breakpointObserver.observe(Breakpoints.Handset)
-      .pipe(
-        map(result => result.matches),
-        shareReplay()
-      ).subscribe((result) => {
-      this.isHandset = result;
-    });
-  }
 
   ngOnInit() {
     this.showAnimation = 'end';
