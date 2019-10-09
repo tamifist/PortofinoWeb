@@ -1,5 +1,7 @@
-<div style="display: flex;justify-content: center">
-<ngb-carousel class="subMenuContext" *ngIf="!isHandset" #carousel interval="false" >
+<ngb-carousel *ngIf="!isHandset" interval="false" class="menu-content-wrapper" [ngClass]="{
+      'menu-content-margin--desktop':!isHandset,
+      'menu-content-margin--mobile':isHandset
+      }">
   <ng-template ngbSlide>
     <div>
       <div>
@@ -46,14 +48,14 @@
     </div>
     <div class="bottomSubMenu"  >
       <div style="position: relative;">
-        <img class="imageShadow slide-image--large"  style="margin-top: 72px;" src="assets/images/Pulse_create_5.jpeg" />
+        <img class="imageShadow slide-image--large"  style="margin-top: 45px;" src="assets/images/Pulse_create_5.jpeg" />
         <div class="tooltip--desktop" style="width: 255px;top: 312px;right: -130px;">For the best results, your qualities should be either all positive traits or all negative traits. For example, if you are ranking attributes against political candidates, it would be clearer to have attributes such as [Trust, Competency, Integrity] as opposed to a mix of attributes such as [Trustworthy, Immoral, Competency, Sexist]</div>
     </div>
       <div  >
         <img class="arrowRightSubMenu arrowRightBold" style="margin-top: 260px;margin-left: 139px;" src="assets/images/arrow-right-sub-menu.PNG" />
       </div>
       <div >
-        <img class="imageShadow slide-image--large" style="margin-top: 72px;margin-left: 139px;" src="assets/images/Pulse_create_6.jpeg" />
+        <img class="imageShadow slide-image--large" style="margin-top: 45px;margin-left: 139px;" src="assets/images/Pulse_create_6.jpeg" />
       </div>
     </div>
   </ng-template>
@@ -68,7 +70,6 @@
       </div>
   </ng-template>
 </ngb-carousel>
-</div>
 
 <img *ngIf="showNextScreen" class="image-carousel-next"
      (click)="carouselNext()"

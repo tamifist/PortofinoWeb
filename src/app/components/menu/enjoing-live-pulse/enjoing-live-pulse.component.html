@@ -1,10 +1,11 @@
-
-<div style="display: flex;justify-content: center">
-  <ngb-carousel class="subMenuContext" *ngIf="!isHandset" #carousel interval="false" >
+<ngb-carousel *ngIf="!isHandset" interval="false" class="menu-content-wrapper" [ngClass]="{
+      'menu-content-margin--desktop':!isHandset,
+      'menu-content-margin--mobile':isHandset
+      }">
     <ng-template ngbSlide>
       <div class="content-up-effect" style="font-size: 13px;"><b>If you wish to create a Live Pulse, please email <a style="text-decoration: underline;" href="mailto:info@truepulse.net">support@truepulse.net </a></b></div>
       <div>
-        <div class="headerSubMenu content-up-effect" style="margin-left: 498px;margin-top: 15px;" >Select a Live Event</div>
+        <div class="headerSubMenu content-up-effect" style="margin-left: 498px;" >Select a Live Event</div>
       </div>
       <div class="bottomSubMenu" >
         <div >
@@ -19,12 +20,12 @@
       </div>
     </ng-template>
     <ng-template ngbSlide>
-      <div  style="display: flex; margin-left: 120px;">
+      <div  style="display: flex;">
         <div >
           <img style="margin-left:150px;" class="imageShadow slide-image--large" src="assets/images/Live_Pulse_3.jpg" />
         </div>
         <div style="width: 868px;margin-top: 90px;">
-          <div style="margin-left: 26px;width: 505px;font-size: 12px;" >At the scheduled time and as the event is about to start, come back to the Live Pulse listing page and select the specific Live Pulse. This will take you to the Live Pulse participation page.</div>
+          <div style="width: 505px;font-size: 12px;" >At the scheduled time and as the event is about to start, come back to the Live Pulse listing page and select the specific Live Pulse. This will take you to the Live Pulse participation page.</div>
           <div>
             <div class="headerSubMenu enjoyingStyleButtonText" style="margin-top: 71px;font-size: 15px!important;">Select a participant. </div>
             <div class="headerSubMenu enjoyingStyleButtonText" style="margin-top: 35px;width: 450px;font-size: 15px!important;">Tap an emoji to express an emotion during the live event.
@@ -37,7 +38,6 @@
       </div>
     </ng-template>
   </ngb-carousel>
-</div>
 
 <img *ngIf="showNextScreen" class="image-carousel-next"
      (click)="carouselNext()"
@@ -73,15 +73,15 @@
       <div >
         <div class="headerSubMenu" [ngClass]="{mobileHeaderSubMenu:isHandset}" >Select a Live Event</div>
       </div>
-      <img class="imageShadow" style="width: 262px; margin-top: 128px;" src="assets/images/Live_Pulse_1.jpeg" >
+      <img class="imageShadow" style="width: 262px; margin-top: 28px;" src="assets/images/Live_Pulse_1.jpeg" >
 
     </div>
   </ng-template>
   <ng-template ngbSlide>
-    <div style="text-align: center; margin: 10px; display: flex; flex-direction: column; align-items: center;" >
-      <div class="bottomSubMenu" style="justify-content: center">
+    <div style="text-align: center; margin: 10px;" >
+      <div>
         <div>
-          <div style="font-size: 15px; margin-top: -15px;" class="headerSubMenuBottomText " >
+          <div style="font-size: 15px;">
             <div >At the scheduled time and as the event is about to start, come back to the Live Pulse listing page and select the specific Live Pulse. This will take you to the Live Pulse participation page.</div>
           </div>
         </div>

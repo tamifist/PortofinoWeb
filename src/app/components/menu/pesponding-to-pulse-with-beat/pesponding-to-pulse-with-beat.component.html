@@ -1,5 +1,7 @@
-<div style="display: flex;justify-content: center">
-<ngb-carousel *ngIf="!isHandset" #carousel interval="false" >
+<ngb-carousel *ngIf="!isHandset" interval="false" class="menu-content-wrapper" [ngClass]="{
+      'menu-content-margin--desktop':!isHandset,
+      'menu-content-margin--mobile':isHandset
+      }">
   <ng-template ngbSlide>
     <div >
       <div style="margin-top: 1px" class="headerSubMenuBottomText content-up-effect" >
@@ -20,28 +22,28 @@
     </div>
   </ng-template>
   <ng-template  ngbSlide>
-    <div style="margin-top: 20px;">
-      <div class="headerSubMenu content-up-effect" >What is important to you?</div>
-      <div style="margin-left: 500px;" class="headerSubMenu content-up-effect" >How important is it to you? </div>
+    <div>
+      <div style="margin-left: 10px;" class="headerSubMenu content-up-effect" >What is important to you?</div>
+      <div style="margin-left: 540px;" class="headerSubMenu content-up-effect" >How important is it to you? </div>
     </div>
-    <div style="margin-top: 50px" class="bottomSubMenu"  >
+    <div style="margin-top: 45px" class="bottomSubMenu"  >
       <div style="position: relative;">
-        <img class="imageShadow slide-image--large"  style="margin-top: 60px;" src="assets/images/Beat_create_3.jpeg" />
-        <div class="tooltip--desktop" style="top: 271px;right: -78px;width: 253px;">For the best results, your qualities should be either all positive traits or all negative traits. For example, if you are ranking attributes against political candidates, it would be clearer to have attributes such as [Trust, Competency, Integrity] as opposed to a mix of attributes such as [Trustworthy, Immoral, Competency, Sexist]</div>
+        <img class="imageShadow slide-image--large" src="assets/images/Beat_create_3.jpeg" />
+        <div class="tooltip--desktop" style="top: 220px;right: -78px;width: 253px;">For the best results, your qualities should be either all positive traits or all negative traits. For example, if you are ranking attributes against political candidates, it would be clearer to have attributes such as [Trust, Competency, Integrity] as opposed to a mix of attributes such as [Trustworthy, Immoral, Competency, Sexist]</div>
       </div>
       <div  >
-        <img class="arrowRightSubMenu arrowRightBold" style="margin-top: 260px;margin-left: 139px;" src="assets/images/arrow-right-sub-menu.PNG" />
+        <img class="arrowRightSubMenu arrowRightBold" style="margin-top: 200px;margin-left: 139px;" src="assets/images/arrow-right-sub-menu.PNG" />
       </div>
       <div >
-        <img class="imageShadow slide-image--large"  style="margin-top: 60px;margin-left: 104px;" src="assets/images/Beat_create_4.jpeg" />
+        <img class="imageShadow slide-image--large"  style="margin-left: 104px;" src="assets/images/Beat_create_4.jpeg" />
       </div>
     </div>
   </ng-template>
   <ng-template  ngbSlide>
-    <div style="margin-top: 20px;">
+    <div>
       <div class="headerSubMenu content-up-effect" >Rank the choices against attributes…     and <span style="text-decoration: underline">publish </span> </div>
     </div>
-    <div style="margin-top: 40px;" class="bottomSubMenu"  >
+    <div class="bottomSubMenu"  >
       <div >
         <img class="imageShadow slide-image--large" style="margin-top: 60px;" src="assets/images/Beat_create_5.jpeg" />
       </div>
@@ -55,8 +57,6 @@
   </ng-template>
 
 </ngb-carousel>
-
-</div>
 
 <img *ngIf="showNextScreen" class="image-carousel-next"
      (click)="carouselNext()"
@@ -110,7 +110,7 @@
       <div class="headerSubMenu" [ngClass]="{mobileHeaderSubMenu:isHandset}" >What is important to you?</div>
     </div>
     <img class="imageShadow" style="width: 262px; margin-top: 58px;" src="assets/images/Beat_create_3.jpeg" >
-    <div class="redCircle" style="position: absolute; width: 270px; height: 181px;top: 378px; padding: 9px; font-size: 12px; line-height: 20px; left: 95px;">For the best results, your qualities should be either all positive traits or all negative traits. For example, if you are ranking attributes against political candidates, it would be clearer to have attributes such as [Trust, Competency, Integrity] as opposed to a mix of attributes such as [Trustworthy, Immoral, Competency, Sexist]. </div>
+    <div class="redCircle" style="position: absolute; width: 270px; height: 181px;top: 320px; padding: 9px; font-size: 12px; line-height: 20px; left: 95px;">For the best results, your qualities should be either all positive traits or all negative traits. For example, if you are ranking attributes against political candidates, it would be clearer to have attributes such as [Trust, Competency, Integrity] as opposed to a mix of attributes such as [Trustworthy, Immoral, Competency, Sexist]. </div>
   </div>
  </ng-template>
   <ng-template ngbSlide>
