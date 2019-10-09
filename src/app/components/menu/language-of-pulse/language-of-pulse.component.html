@@ -1,37 +1,31 @@
-<div class="text-language-of-pulse" [ngClass]="{'marginUpDesktop': !isHandset}">
-  <div class="row">
-    <div class="col-xl-8 text-center">
-      <p>A Pulse is posing a QUESTION</p>
-      <p>A BEAT is answering a PULSE</p>
+<div class="text-language-of-pulse menu-content-wrapper menu-content-margin--desktop">
+  <div>
+    <p>A Pulse is posing a QUESTION</p>
+    <p>A BEAT is answering a PULSE</p>
+    <div style="margin-left: 80px; margin-top: 20px; margin-bottom: 20px;">
       <p>It's EASY!</p>
       <p>It's Powerful!</p>
       <p>It's Fun!</p>
     </div>
   </div>
-  <div class="row justify-content-start badge-row-spacing">
-    <div class="col-xl-6" [ngClass]="{
-    'flex-end': !isHandset,
-    'flex-center': isHandset
-  }">
-      <div>Interested in <span class="font-weight-bold">getting</span> opinions?</div>
+  <div class="row justify-content-start badge-row-spacing no-gutters">
+    <div class="col-lg-4 flex-start">
+    <div class="gothic-font">Interested in <span class="font-weight-bold">getting</span> opinions?</div>
     </div>
-    <div class="col-xl-5" [ngClass]="{
+    <div class="col-lg-8" [ngClass]="{
     'flex-start': !isHandset,
     'flex-center': isHandset
   }">
-      <a  (click)="navigate('/menu/creatingPulse')"   class="rounded-corners-rect color-blue flex-center">
+      <a (click)="navigate('/menu/creatingPulse')" class="rounded-corners-rect color-blue flex-center">
         <div class="text-badge">Create a <span class="font-weight-bold"> Pulse</span></div>
       </a>
     </div>
   </div>
-  <div class="row justify-content-start badge-row-spacing">
-    <div class="col-xl-6" [ngClass]="{
-    'flex-end': !isHandset,
-    'flex-center': isHandset
-  }">
-      <div>Interested in <span class="font-weight-bold"> giving</span> opinions?</div>
+  <div class="row justify-content-start badge-row-spacing no-gutters">
+    <div class="col-xl-4 flex-start">
+      <div class="gothic-font">Interested in <span class="font-weight-bold"> giving</span> opinions?</div>
     </div>
-    <div class="col-xl-5" [ngClass]="{
+    <div class="col-xl-8" [ngClass]="{
     'flex-start': !isHandset,
     'flex-center': isHandset
   }">
@@ -40,14 +34,11 @@
       </a>
     </div>
   </div>
-  <div class="row justify-content-start badge-row-spacing">
-    <div class="col-xl-6" [ngClass]="{
-    'flex-end': !isHandset,
-    'flex-center': isHandset
-  }">
-      <div>Interested in <span class="font-weight-bold"> understanding</span> opinions?</div>
+  <div class="row justify-content-start badge-row-spacing no-gutters">
+    <div class="col-xl-4 flex-start">
+      <div class="gothic-font">Interested in <span class="font-weight-bold"> understanding</span> opinions?</div>
     </div>
-    <div class="col-xl-5" [ngClass]="{
+    <div class="col-xl-8" [ngClass]="{
     'flex-start': !isHandset,
     'flex-center': isHandset
   }">

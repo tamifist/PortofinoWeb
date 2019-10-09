@@ -17,7 +17,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
       state('end', style({
         width: '100%'
       })),
-      transition('* => end', [ animate('2s') ]),
+      transition('* => end', [ animate('1s') ]),
       transition('* => start', [ animate('0s')],
       ),
     ]),
@@ -28,7 +28,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
       state('end', style({
         width: '0%'
       })),
-      transition('* => end', [ animate('2s') ]),
+      transition('* => end', [ animate('1s') ]),
       transition('* => start', [ animate('0s')],
       ),
     ]),
