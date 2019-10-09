@@ -2,7 +2,7 @@
   <div *ngIf="isHandset" style="display: flex;flex-direction: row;justify-content: flex-end; margin-top: 10px;margin-right: 10px;">
     <a style="color: #0070c0!important; font-size: 20px;!important" href="mailto:info@truepulse.net">info@truepulse.net</a></div>
   <div *ngIf="isHandset" style="display: flex;flex-direction: row;justify-content: center; align-items: center;margin-top: 30px;">
-    <img  style="width:160px;" src="/assets/images/truePulseLogo.PNG">
+    <img  style="width:160px;" src="assets/images/truePulseLogo.PNG">
   </div>
   <div *ngIf="!isHandset" style="display: flex; flex-direction: row; justify-content: space-between;">
     <div><img class="logo-img" src="assets/images/truePulseLogo.PNG"></div>
@@ -12,7 +12,8 @@
   </div>
   <div  [ngClass]="{mobileStyleForMobile:isHandset}" style="position: relative;margin-top: 35px;">
     <img style="height: 360px" class="homeMainImage" src="assets/images/Home_Main_image%20-%20Copy.jpg">
-    <img [ngClass]="{mobileStyleForGalaxy:isHandset}" style="position: absolute;right: 121px; top: 10%; width: 115px; height: 64%;"   src="/assets/images/galaxy-s9-mockup-main_comp.png">
+    <img [ngClass]="{mobileStyleForGalaxy:isHandset}" style="position: absolute;right: 121px; top: 10%; width: 115px; height: 64%;"
+         src="assets/images/galaxy-s9-mockup-main_comp.png">
     <a href='https://play.google.com/store/apps/details?id=net.truepulse.mobileapp&hl=en_US&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
       <img [ngClass]="{mobileStyleForGalaxyGooglePlay:isHandset}" style="position: absolute;right: 98px; top: 75%; height: 60px;"
            alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/>
