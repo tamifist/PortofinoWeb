@@ -7,9 +7,9 @@ import {Router} from '@angular/router';
   template: ''
 })
 export class BaseComponent {
-  protected isHandset: boolean;
+  public isHandset: boolean;
 
-  constructor(protected  breakpointObserver: BreakpointObserver, public router: Router) {
+  constructor(public  breakpointObserver: BreakpointObserver, public router: Router) {
     this.breakpointObserver.observe(Breakpoints.Handset)
       .pipe(
         map(result => result.matches),
