@@ -10,7 +10,7 @@ export class BaseComponent {
   public isHandset: boolean;
 
   constructor(public  breakpointObserver: BreakpointObserver, public router: Router) {
-    this.breakpointObserver.observe(Breakpoints.Handset)
+    this.breakpointObserver.observe([Breakpoints.Handset, Breakpoints.Tablet])
       .pipe(
         map(result => result.matches),
         shareReplay()

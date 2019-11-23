@@ -2,6 +2,7 @@ import {AfterViewInit, Component, ElementRef, Renderer2, ViewChild} from '@angul
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import {filter, map, shareReplay} from 'rxjs/operators';
 import {NavigationStart, Router} from '@angular/router';
+import {BaseComponent} from '../base/base.component';
 
 @Component({
   selector: 'app-main-nav',
@@ -9,25 +10,14 @@ import {NavigationStart, Router} from '@angular/router';
   styleUrls: ['./main-nav.component.scss']
 })
 
-export class MainNavComponent implements  AfterViewInit {
+export class MainNavComponent extends BaseComponent implements  AfterViewInit {
 
-  isHandset: boolean;
   @ViewChild('matnavlist', {static : false }) matnavlist: ElementRef ;
 
-  constructor(private breakpointObserver: BreakpointObserver,
+  constructor(public breakpointObserver: BreakpointObserver,
               private render: Renderer2,
-              private router: Router) {
-    this.breakpointObserver.observe(Breakpoints.Handset)
-      .pipe(
-        map(result => result.matches),
-        shareReplay()
-      ).subscribe((result) => {
-     this.isHandset = result;
-    });
-
-
-
-
+              public router: Router) {
+    super(breakpointObserver, router);
   }
 
   ngAfterViewInit(): void {

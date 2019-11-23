@@ -4,6 +4,7 @@ import {Router} from '@angular/router';
 import {map, shareReplay} from 'rxjs/operators';
 import {NgbCarousel} from '@ng-bootstrap/ng-bootstrap';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import {BaseComponent} from '../../base/base.component';
 
 @Component({
   selector: 'app-pesponding-to-pulse-with-beat',
@@ -34,22 +35,11 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
     ]),
   ],
 })
-export class PespondingToPulseWithBeatComponent implements OnInit {
+export class PespondingToPulseWithBeatComponent extends BaseComponent implements OnInit {
   showAnimation = 'start';
-  isHandset: boolean;
   showNextScreen = true;
   showPreviousScreen = false;
   @ViewChild(NgbCarousel, {static : false }) NgbCarouselElement: NgbCarousel ;
-
-  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
-    this.breakpointObserver.observe(Breakpoints.Handset)
-      .pipe(
-        map(result => result.matches),
-        shareReplay()
-      ).subscribe((result) => {
-      this.isHandset = result;
-    });
-  }
 
   ngOnInit() {
     this.showAnimation = 'end';

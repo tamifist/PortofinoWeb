@@ -3,6 +3,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import {map, shareReplay} from 'rxjs/operators';
 import {NgbCarousel} from '@ng-bootstrap/ng-bootstrap';
+import {BaseComponent} from '../../base/base.component';
 
 @Component({
   selector: 'app-enjoing-live-pulse',
@@ -33,22 +34,11 @@ import {NgbCarousel} from '@ng-bootstrap/ng-bootstrap';
     ]),
   ],
 })
-export class EnjoingLivePulseComponent implements OnInit {
+export class EnjoingLivePulseComponent extends BaseComponent implements OnInit {
   showAnimation = 'start';
-  isHandset: boolean;
   showNextScreen = true;
   showPreviousScreen = false;
   @ViewChild(NgbCarousel, {static : false }) NgbCarouselElement: NgbCarousel ;
-
-  constructor(private breakpointObserver: BreakpointObserver) {
-    this.breakpointObserver.observe(Breakpoints.Handset)
-      .pipe(
-        map(result => result.matches),
-        shareReplay()
-      ).subscribe((result) => {
-      this.isHandset = result;
-    });
-  }
 
   ngOnInit() {
     this.showAnimation = 'end';

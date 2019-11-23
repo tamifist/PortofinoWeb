@@ -1,63 +1,63 @@
-<div class="mainContent" style="margin-bottom: 70px">
-  <div *ngIf="isHandset" style="display: flex;flex-direction: row;justify-content: flex-end; margin-top: 10px;margin-right: 10px;">
-    <a style="color: #0070c0!important; font-size: 20px;!important" href="mailto:info@truepulse.net">info@truepulse.net</a></div>
-  <div *ngIf="isHandset" style="display: flex;flex-direction: row;justify-content: center; align-items: center;margin-top: 30px;">
-    <img  style="width:160px;" src="assets/images/truePulseLogo.PNG">
-  </div>
-  <div *ngIf="!isHandset" style="display: flex; flex-direction: row; justify-content: space-between;">
-    <div><img class="logo-img" src="assets/images/truePulseLogo.PNG"></div>
-    <div style=" margin-top: 105px ;margin-right: 250px;">
-      <a style="color: #0070c0!important; font-size: 20px;!important" href="mailto:info@truepulse.net">info@truepulse.net</a>
-    </div>
-  </div>
-  <div  [ngClass]="{mobileStyleForMobile:isHandset}" style="position: relative;margin-top: 35px;">
-    <img style="height: 360px" class="homeMainImage" src="assets/images/Home_Main_image%20-%20Copy.jpg">
-    <img [ngClass]="{mobileStyleForGalaxy:isHandset}" style="position: absolute;right: 121px; top: 10%; width: 115px; height: 64%;"
-         src="assets/images/galaxy-s9-mockup-main_comp.png">
-    <a href='https://play.google.com/store/apps/details?id=net.truepulse.mobileapp&hl=en_US&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
-      <img [ngClass]="{mobileStyleForGalaxyGooglePlay:isHandset}" style="position: absolute;right: 98px; top: 75%; height: 60px;"
-           alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/>
-    </a>
-    <img [ngClass]="{mobileStyleForIphone:isHandset}" style="position: absolute;right: 267px; top: 10%; width: 134px; height: 64%;"  src="assets/images/iphone-mockup-main_comp.png">
-    <a href="https://apps.apple.com/us/app/true-pulse/id1459877391?mt=8" [ngClass]="{mobileStyleForIphoneAppStore:isHandset}"
-       style="position: absolute;top: 78%;right: 269px;height: 12%;display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2019-09-26&kind=iossoftware&bubble=apple_music) no-repeat;width:135px;height:40px;"></a>
-    </div>
+<!--<div class="mainContent" style="margin-bottom: 70px">-->
+<!--  <div *ngIf="isHandset" style="display: flex;flex-direction: row;justify-content: flex-end; margin-top: 10px;margin-right: 10px;">-->
+<!--    <a style="color: #0070c0!important; font-size: 20px;!important" href="mailto:info@truepulse.net">info@truepulse.net</a></div>-->
+<!--  <div *ngIf="isHandset" style="display: flex;flex-direction: row;justify-content: center; align-items: center;margin-top: 30px;">-->
+<!--    <img  style="width:160px;" src="assets/images/truePulseLogo.PNG">-->
+<!--  </div>-->
+<!--  <div *ngIf="!isHandset" style="display: flex; flex-direction: row; justify-content: space-between;">-->
+<!--    <div><img class="logo-img" src="assets/images/truePulseLogo.PNG"></div>-->
+<!--    <div style=" margin-top: 105px ;margin-right: 250px;">-->
+<!--      <a style="color: #0070c0!important; font-size: 20px;!important" href="mailto:info@truepulse.net">info@truepulse.net</a>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div  [ngClass]="{mobileStyleForMobile:isHandset}" style="position: relative;margin-top: 35px;">-->
+<!--    <img style="height: 360px" class="homeMainImage" src="assets/images/Home_Main_image%20-%20Copy.jpg">-->
+<!--    <img [ngClass]="{mobileStyleForGalaxy:isHandset}" style="position: absolute;right: 121px; top: 10%; width: 115px; height: 64%;"-->
+<!--         src="assets/images/galaxy-s9-mockup-main_comp.png">-->
+<!--    <a href='https://play.google.com/store/apps/details?id=net.truepulse.mobileapp&hl=en_US&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>-->
+<!--      <img [ngClass]="{mobileStyleForGalaxyGooglePlay:isHandset}" style="position: absolute;right: 98px; top: 75%; height: 60px;"-->
+<!--           alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/>-->
+<!--    </a>-->
+<!--    <img [ngClass]="{mobileStyleForIphone:isHandset}" style="position: absolute;right: 267px; top: 10%; width: 134px; height: 64%;"  src="assets/images/iphone-mockup-main_comp.png">-->
+<!--    <a href="https://apps.apple.com/us/app/true-pulse/id1459877391?mt=8" [ngClass]="{mobileStyleForIphoneAppStore:isHandset}"-->
+<!--       style="position: absolute;top: 78%;right: 269px;height: 12%;display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2019-09-26&kind=iossoftware&bubble=apple_music) no-repeat;width:135px;height:40px;"></a>-->
+<!--    </div>-->
 
-  <div [ngClass]="{mobileStyleCenterText:isHandset}" style=" display: flex; justify-content: center; color: #0096FF; font-weight: 500; font-size: 26px; text-align: center;  margin-top: 37px;">
-    Is your opinion informed, a guess or your gut? <br>
-    You will be either lucky or wrong.
+<!--  <div [ngClass]="{mobileStyleCenterText:isHandset}" style=" display: flex; justify-content: center; color: #0096FF; font-weight: 500; font-size: 26px; text-align: center;  margin-top: 37px;">-->
+<!--    Is your opinion informed, a guess or your gut? <br>-->
+<!--    You will be either lucky or wrong.-->
 
-  </div>
+<!--  </div>-->
 
-  <div [ngClass]="{mobileStyleBottomContent:isHandset}" class="row" style="display: flex;justify-content: center; margin-top: 36px;margin-left: 0;margin-right: 0">
-    <div (click)="navigate('/menu/creatingPulse')" [ngClass]="{mobileStyleImage:isHandset}" class=" desktopBottomImage">
-      <div [ngClass]="{mobileBottomImageTopText:isHandset}" class="desktopBottomImageTopText">You want to be heard!</div>
-      <div [ngClass]="{mobileBottomImageBottomText:isHandset}" class="desktopBottomImageBottomText">Create a Pulse</div>
-      <img [ngClass]="{mobileTopImageFace:isHandset}" class="desktopTopImageFace" src="assets/images/face5a_circle.png"/>
-      <div style="position: absolute; bottom: -26px; left: 11px;color: #7F7F7F;" >Learn more...</div>
-    </div>
+<!--  <div [ngClass]="{mobileStyleBottomContent:isHandset}" class="row" style="display: flex;justify-content: center; margin-top: 36px;margin-left: 0;margin-right: 0">-->
+<!--    <div (click)="navigate('/menu/creatingPulse')" [ngClass]="{mobileStyleImage:isHandset}" class=" desktopBottomImage">-->
+<!--      <div [ngClass]="{mobileBottomImageTopText:isHandset}" class="desktopBottomImageTopText">You want to be heard!</div>-->
+<!--      <div [ngClass]="{mobileBottomImageBottomText:isHandset}" class="desktopBottomImageBottomText">Create a Pulse</div>-->
+<!--      <img [ngClass]="{mobileTopImageFace:isHandset}" class="desktopTopImageFace" src="assets/images/face5a_circle.png"/>-->
+<!--      <div style="position: absolute; bottom: -26px; left: 11px;color: #7F7F7F;" >Learn more...</div>-->
+<!--    </div>-->
 
-    <a  (click)="navigate('/menu/respondingToPulseWithBeat')"  [ngClass]="{mobileStyleImage:isHandset}" class=" desktopBottomImage">
-      <div [ngClass]="{mobileBottomImageTopText:isHandset}"  class="desktopBottomImageTopText">You want your opinion to <br> count! </div>
-      <div [ngClass]="{mobileBottomImageBottomText:isHandset}" class="desktopBottomImageBottomText">Respond with a Beat</div>
-      <img [ngClass]="{mobileTopImageFace:isHandset}" class="desktopTopImageFace" src="assets/images/face4a_circle.png"/>
-      <div style="position: absolute; bottom: -26px; left: 11px;color: #7F7F7F;" >Learn more...</div>
-    </a>
-    <a  (click)="navigate('/menu/dataAndInsightsFromPulses')"  [ngClass]="{mobileStyleImage:isHandset}" class=" desktopBottomImage">
-      <div [ngClass]="{mobileBottomImageTopText:isHandset}" class="desktopBottomImageTopText">You want to make a <br> Difference</div>
-      <div [ngClass]="{mobileBottomImageBottomText:isHandset}" class="desktopBottomImageBottomText">Look at an Insight</div>
-      <img [ngClass]="{mobileTopImageFace:isHandset}" class="desktopTopImageFace" src="assets/images/face7a_circle.png"/>
-      <div style="position: absolute; bottom: -26px; left: 11px;color: #7F7F7F;" >Learn more...</div>
-    </a>
-  </div>
-</div>
-<!--<div style="text-align: center; margin-top: 30px;">-->
-<!--  <img  routerLink="/menu/languageOfPulse" src="../../../assets/images/arrow-down.png"/>-->
+<!--    <a  (click)="navigate('/menu/respondingToPulseWithBeat')"  [ngClass]="{mobileStyleImage:isHandset}" class=" desktopBottomImage">-->
+<!--      <div [ngClass]="{mobileBottomImageTopText:isHandset}"  class="desktopBottomImageTopText">You want your opinion to <br> count! </div>-->
+<!--      <div [ngClass]="{mobileBottomImageBottomText:isHandset}" class="desktopBottomImageBottomText">Respond with a Beat</div>-->
+<!--      <img [ngClass]="{mobileTopImageFace:isHandset}" class="desktopTopImageFace" src="assets/images/face4a_circle.png"/>-->
+<!--      <div style="position: absolute; bottom: -26px; left: 11px;color: #7F7F7F;" >Learn more...</div>-->
+<!--    </a>-->
+<!--    <a  (click)="navigate('/menu/dataAndInsightsFromPulses')"  [ngClass]="{mobileStyleImage:isHandset}" class=" desktopBottomImage">-->
+<!--      <div [ngClass]="{mobileBottomImageTopText:isHandset}" class="desktopBottomImageTopText">You want to make a <br> Difference</div>-->
+<!--      <div [ngClass]="{mobileBottomImageBottomText:isHandset}" class="desktopBottomImageBottomText">Look at an Insight</div>-->
+<!--      <img [ngClass]="{mobileTopImageFace:isHandset}" class="desktopTopImageFace" src="assets/images/face7a_circle.png"/>-->
+<!--      <div style="position: absolute; bottom: -26px; left: 11px;color: #7F7F7F;" >Learn more...</div>-->
+<!--    </a>-->
+<!--  </div>-->
 <!--</div>-->
+<!--&lt;!&ndash;<div style="text-align: center; margin-top: 30px;">&ndash;&gt;-->
+<!--&lt;!&ndash;  <img  routerLink="/menu/languageOfPulse" src="../../../assets/images/arrow-down.png"/>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
 
-<div style="position: relative">
-  <img class="homeMainImage" style="height: 160px" src="assets/images/banner_image.jpg" />
-  <img style="position: absolute;top: 18px;left: 25px; height: 84px;" class="image" src="assets/images/TruePulseLogo-WHITE.png" />
-</div>
+<!--<div style="position: relative">-->
+<!--  <img class="homeMainImage" style="height: 160px" src="assets/images/banner_image.jpg" />-->
+<!--  <img style="position: absolute;top: 18px;left: 25px; height: 84px;" class="image" src="assets/images/TruePulseLogo-WHITE.png" />-->
+<!--</div>-->
 
 <app-main-nav></app-main-nav>
