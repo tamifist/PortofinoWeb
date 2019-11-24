@@ -2,8 +2,9 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport
       [attr.role]="(isHandset) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset) ? 'over' : 'side'"
-      [opened]="(isHandset) === false">
+      mode="side" position="end">
+<!--    [opened]="(isHandset) === false"-->
+<!--    [mode]="(isHandset) ? 'over' : 'side'"-->
     <div #matnavlist>
     <mat-nav-list  [ngClass]="{desktopStyle:!isHandset}" >
       <a mat-list-item
@@ -44,16 +45,20 @@
     </mat-nav-list>
     </div>
   </mat-sidenav>
-  <mat-sidenav-content style="background-color: #FFFFFF">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-    <router-outlet></router-outlet>
-    <!-- Add Content Here -->
+  <mat-sidenav-content>
+     <div class="banner--default banner-image--default">
+       <img style="height: 60px;" src="assets/images/TruePulseLogo-WHITE.png" />
+       <button
+         type="button"
+         mat-icon-button
+         (click)="drawer.toggle()"
+       >
+         <!--        *ngIf="isHandset"-->
+         <mat-icon class="white-icon">menu</mat-icon>
+       </button>
+     </div>
+      <div>
+        <router-outlet></router-outlet>
+      </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

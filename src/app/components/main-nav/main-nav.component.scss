@@ -44,3 +44,29 @@ mat-sidenav {
   //margin-top: 50px;
 }
 
+/* new */
+
+.white-icon {
+  color: white;
+}
+/* Note: If you're using an SVG icon, you should make the class target the `<svg>` element */
+.white-icon svg {
+  fill: white;
+}
+
+.banner--default {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 20px 20px;
+}
+
+.banner-image--default {
+  background-image: url('../../../assets/images/banner_image.jpg');
+  background-position-y: -50px;
+  height: 100px;
+}
+
+
+
+
