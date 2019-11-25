@@ -1,8 +1,6 @@
-<a  id="bottom"></a>
+<!--<a id="bottom"></a>-->
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset) ? 'dialog' : 'navigation'"
-      mode="side" position="end">
+  <mat-sidenav #drawer mode="side" position="end">
 <!--    [opened]="(isHandset) === false"-->
 <!--    [mode]="(isHandset) ? 'over' : 'side'"-->
     <div #matnavlist>
@@ -46,18 +44,48 @@
     </div>
   </mat-sidenav>
   <mat-sidenav-content>
-     <div class="banner--default banner-image--default">
-       <img style="height: 60px;" src="assets/images/TruePulseLogo-WHITE.png" />
+     <div class="banner--home" [ngClass]="isHandset ? 'banner-image--home--mobile' : 'banner-image--home'" *ngIf="isHome">
+       <div style="height:100%; width: 55%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;">
+         <a (click)="navigate('/menu/home')">
+           <img style="height: 60px;" src="assets/images/TruePulseLogo-WHITE.png" />
+         </a>
+         <div class="text-white text-center" style="height:100%;  width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+           <span>
+            Is your opinion informed, a guess or your<br/>
+            gut?<br/>
+            You will be either lucky or wrong.
+           </span>
+         </div>
+       </div>
+       <div style="display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-start;">
+         <button
+           type="button"
+           mat-icon-button
+           (click)="drawer.toggle()">
+           <!--        *ngIf="isHandset"-->
+           <mat-icon class="white-icon">menu</mat-icon>
+         </button>
+         <a href='https://play.google.com/store/apps/details?id=net.truepulse.mobileapp&hl=en_US&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+           <img style="height: 59px;"
+                alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/>
+         </a>
+         <a href="https://apps.apple.com/us/app/true-pulse/id1459877391?mt=8"
+            style="width:135px;height:40px;margin-right:8px;background:url(https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2019-09-26&kind=iossoftware&bubble=apple_music) no-repeat;"></a>
+       </div>
+     </div>
+     <div class="banner--default banner-image--default" *ngIf="!isHome">
+       <a (click)="navigate('/menu/home')">
+         <img style="height: 60px;" src="assets/images/TruePulseLogo-WHITE.png" />
+       </a>
        <button
          type="button"
          mat-icon-button
-         (click)="drawer.toggle()"
-       >
+         (click)="drawer.toggle()">
          <!--        *ngIf="isHandset"-->
          <mat-icon class="white-icon">menu</mat-icon>
        </button>
      </div>
-      <div>
+     <div>
         <router-outlet></router-outlet>
       </div>
   </mat-sidenav-content>

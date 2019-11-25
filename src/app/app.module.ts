@@ -26,6 +26,7 @@ import {BaseComponent} from './components/base/base.component';
 // tslint:disable-next-line:max-line-length
 import { FindingYourWayAroundPulseAppComponent } from './components/menu/finding-your-way-around-pulse-app/finding-your-way-around-pulse-app.component';
 import { DataAndInsightFromPulsesComponent } from './components/menu/data-and-insight-from-pulses/data-and-insight-from-pulses.component';
+import { HomeComponent } from './components/menu/home/home.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { DataAndInsightFromPulsesComponent } from './components/menu/data-and-in
     FindingYourWayAroundPulseAppComponent,
     EnjoingLivePulseComponent,
     BaseComponent,
-    DataAndInsightFromPulsesComponent
+    DataAndInsightFromPulsesComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

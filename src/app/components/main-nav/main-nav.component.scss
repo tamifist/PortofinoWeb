@@ -61,10 +61,34 @@ mat-sidenav {
   padding: 20px 20px 20px 20px;
 }
 
+.banner--home {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 20px 20px 20px;
+}
+
 .banner-image--default {
   background-image: url('../../../assets/images/banner_image.jpg');
   background-position-y: -50px;
   height: 100px;
+}
+
+.banner-image--home {
+  background-image: url('../../../assets/images/banner_image_home.jpg');
+  height: 500px;
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: 35% 0%;
+}
+
+.banner-image--home--mobile {
+  background-image: url('../../../assets/images/banner-image-home-mobile.jpg');
+  height: 812px;
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  //background-position: center center;
+  background-position: 100% 0%;
 }
 
 

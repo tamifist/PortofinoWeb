@@ -19,9 +19,8 @@ export class MainNavComponent extends BaseComponent implements  AfterViewInit {
               public router: Router) {
     super(breakpointObserver, router);
   }
-
+  isHome: boolean;
   ngAfterViewInit(): void {
-
     let childrenItems = this.matnavlist.nativeElement.children[0].children;
 
     for ( let i = 0; i < childrenItems.length ; i++ ) {
@@ -30,7 +29,19 @@ export class MainNavComponent extends BaseComponent implements  AfterViewInit {
       }
     }
 
+    if (this.router.url.match('/menu/home')) {
+      this.isHome = true;
+    } else {
+      this.isHome = false;
+    }
+
     this.router.events.pipe(filter(event => event instanceof NavigationStart)).subscribe((event :any) => {
+      if (event.url.match('/menu/home')) {
+        this.isHome = true;
+      } else {
+        this.isHome = false;
+      }
+
       for ( let i = 0; i < childrenItems.length ; i++ ) {
         this.render.removeClass(childrenItems[i].children[0], 'active');
       }

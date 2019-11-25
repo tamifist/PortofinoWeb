@@ -16,9 +16,11 @@ import {PulseForCorporatesComponent} from './components/menu/pulse-for-corporate
 import {FindingYourWayAroundPulseAppComponent} from './components/menu/finding-your-way-around-pulse-app/finding-your-way-around-pulse-app.component';
 import {EnjoingLivePulseComponent} from './components/menu/enjoing-live-pulse/enjoing-live-pulse.component';
 import {DataAndInsightFromPulsesComponent} from './components/menu/data-and-insight-from-pulses/data-and-insight-from-pulses.component';
+import {HomeComponent} from './components/menu/home/home.component';
 
 
 const menuRoutes: Routes = [
+  { path: 'home', component: HomeComponent},
   { path: 'languageOfPulse', component: LanguageOfPulseComponent},
   { path: 'creatingPulse', component: CreatingPulseComponent},
   { path: 'respondingToPulseWithBeat', component: PespondingToPulseWithBeatComponent},
@@ -33,7 +35,7 @@ const menuRoutes: Routes = [
 ];
 
 const routes: Routes = [
-  { path: '', redirectTo: 'menu/languageOfPulse', pathMatch: 'full' },
+  { path: '', redirectTo: 'menu/home', pathMatch: 'full' },
   { path: 'menu', component: MenuComponent, children: menuRoutes , data: {animation: 'menu'} },
 ];
 
