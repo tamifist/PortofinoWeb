@@ -1,92 +1,27 @@
-<ngb-carousel *ngIf="!isHandset" interval="false" class="menu-content-wrapper" [ngClass]="{
-      'menu-content-margin--desktop':!isHandset,
-      'menu-content-margin--mobile':isHandset
-      }">
-    <ng-template ngbSlide>
-      <div class="content-up-effect" style="font-size: 13px;"><b>If you wish to create a Live Pulse, please email <a style="text-decoration: underline;" href="mailto:info@truepulse.net">support@truepulse.net </a></b></div>
-      <div>
-        <div class="headerSubMenu content-up-effect" style="margin-left: 498px;" >Select a Live Event</div>
-      </div>
-      <div class="bottomSubMenu" >
-        <div >
-          <img class="imageShadow slide-image--large"  style="margin-top: 40px;" src="assets/images/Live_Pulse_1.jpeg" />
-        </div>
-        <div>
-          <img class="arrowRightSubMenu arrowRightBold" style="margin-top: 200px;margin-left: 80px;margin-right:80px;" src="assets/images/arrow-right-sub-menu.PNG" />
-        </div>
-        <div>
-          <img class="imageShadow slide-image--large"  style="margin-top: 40px;" src="assets/images/Live_Pulse_2.jpeg" />
-        </div>
-      </div>
-    </ng-template>
-    <ng-template ngbSlide>
-      <div  style="display: flex;">
-        <div >
-          <img style="margin-left:150px;" class="imageShadow slide-image--large" src="assets/images/Live_Pulse_3.jpg" />
-        </div>
-        <div style="width: 868px;margin-top: 90px;">
-          <div style="width: 505px;font-size: 12px;" >At the scheduled time and as the event is about to start, come back to the Live Pulse listing page and select the specific Live Pulse. This will take you to the Live Pulse participation page.</div>
-          <div>
-            <div class="headerSubMenu enjoyingStyleButtonText" style="margin-top: 71px;font-size: 15px!important;">Select a participant. </div>
-            <div class="headerSubMenu enjoyingStyleButtonText" style="margin-top: 35px;width: 450px;font-size: 15px!important;">Tap an emoji to express an emotion during the live event.
-              Repeat as often as you like for each participant.
-            </div>
-            <div class="headerSubMenu enjoyingStyleButtonText" style="margin-top: 43px;font-size: 15px!important;">Watch what the world thinks in real-time. </div>
-            <div class="headerSubMenu enjoyingStyleButtonText" style="margin-top: 47px;font-size: 15px!important;">Add comments as often as you like. </div>
-          </div>
-        </div>
-      </div>
-    </ng-template>
-  </ngb-carousel>
-
-<img *ngIf="showNextScreen" class="image-carousel-next"
-     (click)="carouselNext()"
-     [ngClass]="{mobileStyle:isHandset}"
-     src="assets/images/arrow-right.PNG" >
-
-<img *ngIf="showPreviousScreen" class="image-carousel-previous"
-     (click)="carouselPrevious()"
-     [ngClass]="{mobileStyle:isHandset, mobileStylePreviousArray:isHandset}"
-     src="assets/images/arrow-left.png " >
-
-
-<div *ngIf="!isHandset" class="flex">
-  <div [@extended]="showAnimation" class="extended" ></div>
-  <div  [@narrowing]="showAnimation" class="narrowing" ></div>
+<div class="content-container">
+  <p class="text-center"><b>If you wish to create a Live Pulse, please email <a style="text-decoration: underline;" href="mailto:info@truepulse.net">support@truepulse.net</a></b></p>
+  <img  class="content-image" src="assets/images/Live_Pulse_1.jpeg" />
+  <h5 class="blue-text" style="padding-top: 40px;">Select a Live Event</h5>
+  <img class="content-image" src="assets/images/Live_Pulse_2.jpeg" />
+  <p class="text-center" style="padding-top: 40px;">At the scheduled time and as the event is about to start, come back to the Live Pulse listing page and select the specific Live Pulse. This will take you to the Live Pulse participation page.</p>
+  <img class="content-image" src="assets/images/Live_Pulse_3.jpg">
 </div>
 
-<ngb-carousel *ngIf="isHandset" #carousel interval="false" >
-  <ng-template ngbSlide>
-    <div style="text-align: center; margin: 10px; display: flex; flex-direction: column; align-items: center;" >
-      <div class="bottomSubMenu" style="justify-content: center">
-        <div>
-          <div style="font-size: 15px; margin-top: 29px;" class="headerSubMenuBottomText " >
-            <div ><b>If you wish to create a Live Pulse, please email <a style="text-decoration: underline;" href="mailto:info@truepulse.net">support@truepulse.net </a></b></div>
-          </div>
-        </div>
-      </div>
-      <img class="imageShadow" style="width: 262px; margin-top: 58px;" src="assets/images/Live_Pulse_1.jpeg" >
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div style="text-align: center; margin: 10px" >
-      <div >
-        <div class="headerSubMenu" [ngClass]="{mobileHeaderSubMenu:isHandset}" >Select a Live Event</div>
-      </div>
-      <img class="imageShadow" style="width: 262px; margin-top: 28px;" src="assets/images/Live_Pulse_1.jpeg" >
-
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div style="text-align: center; margin: 10px;" >
-      <div>
-        <div>
-          <div style="font-size: 15px;">
-            <div >At the scheduled time and as the event is about to start, come back to the Live Pulse listing page and select the specific Live Pulse. This will take you to the Live Pulse participation page.</div>
-          </div>
-        </div>
-      </div>
-      <img class="imageShadow" style="width: 262px; margin-top: 58px;" src="assets/images/Live_Pulse_1.jpeg" >
-    </div>
-  </ng-template>
-</ngb-carousel>
+<!--<ng-template ngbSlide>-->
+<!--  <div  style="display: flex;">-->
+<!--    <div >-->
+<!--      <img style="margin-left:150px;" class="imageShadow slide-image&#45;&#45;large" src="assets/images/Live_Pulse_3.jpg" />-->
+<!--    </div>-->
+<!--    <div style="width: 868px;margin-top: 90px;">-->
+<!--      <div style="width: 505px;font-size: 12px;" >At the scheduled time and as the event is about to start, come back to the Live Pulse listing page and select the specific Live Pulse. This will take you to the Live Pulse participation page.</div>-->
+<!--      <div>-->
+<!--        <div class="headerSubMenu enjoyingStyleButtonText" style="margin-top: 71px;font-size: 15px!important;">Select a participant. </div>-->
+<!--        <div class="headerSubMenu enjoyingStyleButtonText" style="margin-top: 35px;width: 450px;font-size: 15px!important;">Tap an emoji to express an emotion during the live event.-->
+<!--          Repeat as often as you like for each participant.-->
+<!--        </div>-->
+<!--        <div class="headerSubMenu enjoyingStyleButtonText" style="margin-top: 43px;font-size: 15px!important;">Watch what the world thinks in real-time. </div>-->
+<!--        <div class="headerSubMenu enjoyingStyleButtonText" style="margin-top: 47px;font-size: 15px!important;">Add comments as often as you like. </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</ng-template>-->

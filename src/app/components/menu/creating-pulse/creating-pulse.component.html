@@ -1,167 +1,28 @@
-<ngb-carousel *ngIf="!isHandset" interval="false" class="menu-content-wrapper" [ngClass]="{
-      'menu-content-margin--desktop':!isHandset,
-      'menu-content-margin--mobile':isHandset
-      }">
-  <ng-template ngbSlide>
-    <div>
-      <div>
-        <div class="headerSubMenu content-up-effect" >What is my question or topic?</div>
-      </div>
-       <div class="bottomSubMenu">
-         <div>
-           <div class="headerSubMenuBottomText content-up-effect" >
-             <div>First, select the <img style="width: 24px;height: 24px" src="assets/images/ic_circled_plus@3x.png"/> symbol from the Home screen.</div>
-             <div style="margin-top: 16px;" >Then select your Pulse topic category.</div>
-           </div>
-           <img class="imageShadow slide-image--small" style="margin-top: 150px;" src="assets/images/Pulse_create_1.jpeg" />
-         </div>
-         <div>
-           <img class="arrowRightSubMenu arrowRightBold"  style="margin-top: 170px;" src="assets/images/arrow-right-sub-menu.PNG" />
-         </div>
-         <div>
-           <img class="imageShadow slide-image--large"  src="assets/images/Pulse_create_2.jpeg" />
-         </div>
-       </div>
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div >
-      <div class="headerSubMenu content-up-effect" >Who/What are my choices?</div>
-    </div>
-    <div class="bottomSubMenu" >
-      <div style="position: relative">
-        <img class="imageShadow slide-image--large" style="margin-top: 40px;" src="assets/images/Pulse_create_3.jpeg" />
-        <div class="tooltip--desktop" style="top:140px;right: -173px; width:200px;">The best topics are those that engage your audience with clear distinct choices. Avoid questions that will likely create 'yes' or 'no' type responses.</div>
-      </div>
-      <div>
-        <img class="arrowRightSubMenu" class="arrowRightBold" style="margin-top: 260px;margin-left: 139px;" src="assets/images/arrow-right-sub-menu.PNG" />
-      </div>
-      <div>
-        <img class="imageShadow slide-image--large"  style="margin-top: 40px;margin-left: 139px;" src="assets/images/Pulse_create_4.jpeg" />
-      </div>
-    </div>
-  </ng-template>
-  <ng-template  ngbSlide>
-    <div>
-      <div class="headerSubMenu content-up-effect" >Why would I select a choice?</div>
-      <div style="margin-left: 562px;" class="headerSubMenu content-up-effect" >How Important is each thing to me?</div>
-    </div>
-    <div class="bottomSubMenu"  >
-      <div style="position: relative;">
-        <img class="imageShadow slide-image--large"  style="margin-top: 45px;" src="assets/images/Pulse_create_5.jpeg" />
-        <div class="tooltip--desktop" style="width: 255px;top: 312px;right: -130px;">For the best results, your qualities should be either all positive traits or all negative traits. For example, if you are ranking attributes against political candidates, it would be clearer to have attributes such as [Trust, Competency, Integrity] as opposed to a mix of attributes such as [Trustworthy, Immoral, Competency, Sexist]</div>
-    </div>
-      <div  >
-        <img class="arrowRightSubMenu arrowRightBold" style="margin-top: 260px;margin-left: 139px;" src="assets/images/arrow-right-sub-menu.PNG" />
-      </div>
-      <div >
-        <img class="imageShadow slide-image--large" style="margin-top: 45px;margin-left: 139px;" src="assets/images/Pulse_create_6.jpeg" />
-      </div>
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div style="width:1046px;" >
-        <div class="headerSubMenu content-up-effect" >You are now ready to do a final review of Pulse and Publish</div>
-      </div>
-      <div class="bottomSubMenu" style="margin-left: 150px;">
-        <div >
-          <img class="imageShadow slide-image--large"  style="margin-top: 40px;" src="assets/images/Pulse_create_7.jpeg" />
-        </div>
-      </div>
-  </ng-template>
-</ngb-carousel>
+<!--<div *ngIf="!isHandset" class="flex">-->
+<!--  <div [@extended]="showAnimation" class="extended" ></div>-->
+<!--  <div  [@narrowing]="showAnimation" class="narrowing" ></div>-->
+<!--</div>-->
 
-<img *ngIf="showNextScreen" class="image-carousel-next"
-     (click)="carouselNext()"
-     [ngClass]="{mobileStyle:isHandset}"
-     src="assets/images/arrow-right.PNG" >
-
-<img *ngIf="showPreviousScreen" class="image-carousel-previous"
-     (click)="carouselPrevious()"
-     [ngClass]="{mobileStyle:isHandset, mobileStylePreviousArray:isHandset}"
-     src="assets/images/arrow-left.png " >
-
-
-<div *ngIf="!isHandset" class="flex">
-  <div [@extended]="showAnimation" class="extended" ></div>
-  <div  [@narrowing]="showAnimation" class="narrowing" ></div>
+<div class="content-container">
+  <h5 class="blue-text">What is my question or topic?</h5>
+  <br>
+  <p class="text-center">First, select the <img style="width: 25px;" src="assets/images/ic_circled_plus@3x.png"/> symbol from the Home screen.</p>
+  <p>Then select your Pulse topic category.</p>
+  <img  class="content-image" src="assets/images/Pulse_create_1.jpeg" />
+  <img class="content-image" src="assets/images/Pulse_create_2.jpeg" />
+  <h5 class="blue-text" style="padding-top: 40px;">Who/What are my choices?</h5>
+  <div style="position: relative;">
+    <img class="content-image" src="assets/images/Pulse_create_3.jpeg">
+    <div class="redCircle" style="position: absolute;top: 202px;font-size: 12px;width: 190px;right: 44px;line-height: 20px;height: 115px;padding: 8px;"> The best topics are those that engage your audience with clear distinct choices. Avoid questions that will likely create 'yes' or 'no' type responses.</div>
+  </div>
+  <img class="content-image" src="assets/images/Pulse_create_4.jpeg">
+  <h5 class="blue-text" style="padding-top: 40px;">Why would I select a choice?</h5>
+  <div style="position: relative;">
+    <img class="content-image" src="assets/images/Pulse_create_5.jpeg">
+    <div class="redCircle" style="position: absolute; width: 266px; height: 177px;  top: 300px;  padding: 9px;  font-size: 12px;  line-height: 20px; left: -5px;">For the best results, your qualities should be either all positive traits or all negative traits. For example, if you are ranking attributes against political candidates, it would be clearer to have attributes such as [Trust, Competency, Integrity] as opposed to a mix of attributes such as [Trustworthy, Immoral, Competency, Sexist].</div>
+  </div>
+  <h5 class="blue-text" style="padding-top: 40px;">How Important is each thing to me?</h5>
+  <img class="content-image" src="assets/images/Pulse_create_6.jpeg">
+  <h5 class="blue-text text-center" style="padding-top: 40px;">You are now ready to do a final review of Pulse and Publish</h5>
+  <img class="content-image" src="assets/images/Pulse_create_7.jpeg">
 </div>
-
-
-
-<ngb-carousel *ngIf="isHandset" #carousel interval="false" >
-  <ng-template ngbSlide>
-    <div style="text-align: center; margin: 10px;">
-      <div >
-        <div >
-          <div class="headerSubMenu" [ngClass]="{mobileHeaderSubMenu:isHandset}" >What is my question or topic?</div>
-        </div>
-        <div class="bottomSubMenu" style="margin-top: -35px">
-          <div>
-            <div style="font-size: 15px" class="headerSubMenuBottomText " >
-              <div>First, select the <img style="width: 24px;height: 24px" src="assets/images/ic_circled_plus@3x.png"/> symbol from the Home screen.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img  class="imageShadow" style="width: 262px;  margin-top: 80px; margin-left: -3px;" src="assets/images/Pulse_create_1.jpeg" />
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div style="text-align: center; margin: 10px; display: flex; flex-direction: column; align-items: center;" >
-      <div >
-        <div class="headerSubMenu" [ngClass]="{mobileHeaderSubMenu:isHandset}" >What is my question or topic?</div>
-      </div>
-      <div class="bottomSubMenu" style="justify-content: center">
-        <div>
-          <div style="font-size: 15px; margin-top: 42px;" class="headerSubMenuBottomText " >
-            <div  >Then select your Pulse topic category.</div>
-          </div>
-        </div>
-      </div>
-      <img class="imageShadow" style="width: 262px; margin-top: 58px;" src="assets/images/Pulse_create_2.jpeg" >
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div style="text-align: center; margin: 10px" >
-      <div >
-        <div class="headerSubMenu" [ngClass]="{mobileHeaderSubMenu:isHandset}" >Who/What are my choices?</div>
-      </div>
-      <img class="imageShadow" style="width: 262px;margin-top: 36px;" src="assets/images/Pulse_create_3.jpeg" >
-      <div class="redCircle" style="position: absolute;top: 202px;font-size: 12px;width: 190px;right: 44px;line-height: 20px;height: 115px;padding: 8px;"> The best topics are those that engage your audience with clear distinct choices. Avoid questions that will likely create 'yes' or 'no' type responses</div>
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div style="text-align: center; margin: 10px" >
-      <div >
-        <div class="headerSubMenu" [ngClass]="{mobileHeaderSubMenu:isHandset}" >Who/What are my choices?</div>
-      </div>
-      <img class="imageShadow" style="width: 262px; margin-top: 58px;" src="assets/images/Pulse_create_4.jpeg" >
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div style="text-align: center; margin: 10px" >
-      <div >
-        <div class="headerSubMenu" [ngClass]="{mobileHeaderSubMenu:isHandset}" >Why would I select a choice?</div>
-      </div>
-      <img class="imageShadow" style="width: 262px; margin-top: 58px;" src="assets/images/Pulse_create_5.jpeg" >
-      <div class="redCircle" style="position: absolute; width: 266px; height: 177px;  top: 378px;  padding: 9px;  font-size: 12px;  line-height: 20px; left: 95px;">For the best results, your qualities should be either all positive traits or all negative traits. For example, if you are ranking attributes against political candidates, it would be clearer to have attributes such as [Trust, Competency, Integrity] as opposed to a mix of attributes such as [Trustworthy, Immoral, Competency, Sexist]</div>
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div style="text-align: center; margin: 10px" >
-      <div >
-        <div class="headerSubMenu" [ngClass]="{mobileHeaderSubMenu:isHandset}" >How Important is each thing to me?</div>
-      </div>
-      <img class="imageShadow"  style="width: 262px; margin-top: 58px;" src="assets/images/Pulse_create_6.jpeg" >
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div style="text-align: center; margin: 10px" >
-      <div >
-        <div class="headerSubMenu" [ngClass]="{mobileHeaderSubMenu:isHandset}" >You are now ready to do a final review of Pulse and Publish</div>
-      </div>
-      <img class="imageShadow"  style="width: 262px; margin-top: 58px;" src="assets/images/Pulse_create_7.jpeg" >
-    </div>
-  </ng-template>
-</ngb-carousel>

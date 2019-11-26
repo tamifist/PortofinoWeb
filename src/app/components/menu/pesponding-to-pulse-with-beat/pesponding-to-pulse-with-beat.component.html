@@ -1,142 +1,21 @@
-<ngb-carousel *ngIf="!isHandset" interval="false" class="menu-content-wrapper" [ngClass]="{
-      'menu-content-margin--desktop':!isHandset,
-      'menu-content-margin--mobile':isHandset
-      }">
-  <ng-template ngbSlide>
-    <div >
-      <div style="margin-top: 1px" class="headerSubMenuBottomText content-up-effect" >
-        <div>From the <b> Home, Trending, My Pulse </b> screens, you can tap on any Pulse topic. </div>
-        <div style="margin-top: 16px;" >Then tap the  <img style="width: 29px" src="assets/images/beat_create.png"/>  Beat symbol to respond to a Pulse</div>
-      </div>
-      <div class="bottomSubMenu">
-        <div style="margin-top: 28px">
-          <img class="imageShadow slide-image--large"  style="margin-top: 60px;" src="assets/images/Beat_create_1.jpeg" />
-        </div>
-        <div style="margin-top: 28px">
-          <img class="arrowRightSubMenu arrowRightBold" style="margin-top: 260px;" src="assets/images/arrow-right-sub-menu.PNG" />
-        </div>
-        <div style="margin-top: 28px">
-          <img class="imageShadow slide-image--large"  style="margin-top: 60px;" src="assets/images/Beat_create_2.jpeg" />
-        </div>
-      </div>
-    </div>
-  </ng-template>
-  <ng-template  ngbSlide>
-    <div>
-      <div style="margin-left: 10px;" class="headerSubMenu content-up-effect" >What is important to you?</div>
-      <div style="margin-left: 540px;" class="headerSubMenu content-up-effect" >How important is it to you? </div>
-    </div>
-    <div style="margin-top: 45px" class="bottomSubMenu"  >
-      <div style="position: relative;">
-        <img class="imageShadow slide-image--large" src="assets/images/Beat_create_3.jpeg" />
-        <div class="tooltip--desktop" style="top: 220px;right: -78px;width: 253px;">For the best results, your qualities should be either all positive traits or all negative traits. For example, if you are ranking attributes against political candidates, it would be clearer to have attributes such as [Trust, Competency, Integrity] as opposed to a mix of attributes such as [Trustworthy, Immoral, Competency, Sexist]</div>
-      </div>
-      <div  >
-        <img class="arrowRightSubMenu arrowRightBold" style="margin-top: 200px;margin-left: 139px;" src="assets/images/arrow-right-sub-menu.PNG" />
-      </div>
-      <div >
-        <img class="imageShadow slide-image--large"  style="margin-left: 104px;" src="assets/images/Beat_create_4.jpeg" />
-      </div>
-    </div>
-  </ng-template>
-  <ng-template  ngbSlide>
-    <div>
-      <div class="headerSubMenu content-up-effect" >Rank the choices against attributes…     and <span style="text-decoration: underline">publish </span> </div>
-    </div>
-    <div class="bottomSubMenu"  >
-      <div >
-        <img class="imageShadow slide-image--large" style="margin-top: 60px;" src="assets/images/Beat_create_5.jpeg" />
-      </div>
-      <div  >
-        <img class="arrowRightSubMenu arrowRightBold" style="margin-top: 260px;" src="assets/images/arrow-right-sub-menu.PNG" />
-      </div>
-      <div >
-        <img class="imageShadow slide-image--large"  style="margin-top: 60px;" src="assets/images/Beat_create_6.jpeg" />
-      </div>
-    </div>
-  </ng-template>
+<!--<div *ngIf="!isHandset" class="flex">-->
+<!--  <div [@extended]="showAnimation" class="extended" ></div>-->
+<!--  <div  [@narrowing]="showAnimation" class="narrowing" ></div>-->
+<!--</div>-->
 
-</ngb-carousel>
-
-<img *ngIf="showNextScreen" class="image-carousel-next"
-     (click)="carouselNext()"
-     [ngClass]="{mobileStyle:isHandset}"
-     src="assets/images/arrow-right.PNG" >
-
-<img *ngIf="!showNextScreen && !isHandset " class="image-carousel-next"
-     [ngClass]="{mobileStyle:isHandset}"
-     style="height: 100px;"
-     src="assets/images/post-my-beat.png" >
-
-<img *ngIf="showPreviousScreen" class="image-carousel-previous"
-     (click)="carouselPrevious()"
-     [ngClass]="{mobileStyle:isHandset, mobileStylePreviousArray:isHandset}"
-     src="assets/images/arrow-left.png " >
-
-
-<div *ngIf="!isHandset" class="flex">
-  <div [@extended]="showAnimation" class="extended" ></div>
-  <div  [@narrowing]="showAnimation" class="narrowing" ></div>
-</div>
-
-<ngb-carousel *ngIf="isHandset" #carousel interval="false" >
-  <ng-template ngbSlide>
-    <div style="text-align: center; margin: 10px; display: flex; flex-direction: column; align-items: center;" >
-      <div class="bottomSubMenu" style="justify-content: center">
-        <div>
-          <div style="font-size: 15px; margin-top: 42px;" class="headerSubMenuBottomText " >
-            <div  >From the <b> Home, Trending, My Pulse </b> screens, you can tap on any Pulse topic.</div>
-          </div>
-        </div>
-      </div>
-      <img class="imageShadow" style="width: 262px; margin-top: 58px;" src="assets/images/Beat_create_1.jpeg" >
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div style="text-align: center; margin: 10px; display: flex; flex-direction: column; align-items: center;" >
-      <div class="bottomSubMenu" style="justify-content: center">
-        <div>
-          <div style="font-size: 15px; margin-top: 42px;" class="headerSubMenuBottomText " >
-            <div  ><div style="margin-top: 16px;" >Then tap the  <img style="width: 29px" src="assets/images/beat_create.png"/>  Beat symbol to respond to a Pulse</div></div>
-          </div>
-        </div>
-      </div>
-      <img class="imageShadow" style="width: 262px; margin-top: 58px;" src="assets/images/Beat_create_2.jpeg" >
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-  <div style="text-align: center; margin: 10px" >
-    <div >
-      <div class="headerSubMenu" [ngClass]="{mobileHeaderSubMenu:isHandset}" >What is important to you?</div>
-    </div>
-    <img class="imageShadow" style="width: 262px; margin-top: 58px;" src="assets/images/Beat_create_3.jpeg" >
-    <div class="redCircle" style="position: absolute; width: 270px; height: 181px;top: 320px; padding: 9px; font-size: 12px; line-height: 20px; left: 95px;">For the best results, your qualities should be either all positive traits or all negative traits. For example, if you are ranking attributes against political candidates, it would be clearer to have attributes such as [Trust, Competency, Integrity] as opposed to a mix of attributes such as [Trustworthy, Immoral, Competency, Sexist]. </div>
+<div class="content-container">
+  <p class="text-center">From the <b> Home, Trending, My Pulse </b> screens, you can tap on any Pulse topic.</p>
+  <p class="text-center">Then tap the  <img style="width: 25px" src="assets/images/beat_create.png"/>Beat symbol to respond to a Pulse.</p>
+  <img  class="content-image" src="assets/images/Beat_create_1.jpeg" />
+  <img class="content-image" src="assets/images/Beat_create_2.jpeg" />
+  <h5 class="blue-text" style="padding-top: 40px;">What is important to you?</h5>
+  <div style="position: relative;">
+    <img class="content-image" src="assets/images/Beat_create_3.jpeg">
+    <div class="tooltip--desktop" style="top: 280px;left: 20px;width: 253px;">For the best results, your qualities should be either all positive traits or all negative traits. For example, if you are ranking attributes against political candidates, it would be clearer to have attributes such as [Trust, Competency, Integrity] as opposed to a mix of attributes such as [Trustworthy, Immoral, Competency, Sexist].</div>
   </div>
- </ng-template>
-  <ng-template ngbSlide>
-    <div style="text-align: center; margin: 10px" >
-      <div >
-        <div class="headerSubMenu" [ngClass]="{mobileHeaderSubMenu:isHandset}" >How Important is it to you?</div>
-      </div>
-      <img class="imageShadow" style="width: 262px; margin-top: 58px;" src="assets/images/Beat_create_4.jpeg" >
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div style="text-align: center; margin: 10px" >
-      <div >
-        <div class="headerSubMenu" [ngClass]="{mobileHeaderSubMenu:isHandset}" >Rank the choices against attributes…     <span style="text-decoration: underline">  and publish</span>
-        </div>
-      </div>
-      <img class="imageShadow" style="width: 262px; margin-top: 58px;" src="assets/images/Beat_create_5.jpeg" >
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div style="text-align: center; margin: 10px" >
-      <div >
-        <div class="headerSubMenu" [ngClass]="{mobileHeaderSubMenu:isHandset}" >Rank the choices against attributes…   <span style="text-decoration: underline">  and publish</span>
-        </div>
-      </div>
-      <img class="imageShadow" style="width: 262px; margin-top: 58px;" src="assets/images/Beat_create_6.jpeg" >
-    </div>
-  </ng-template>
-</ngb-carousel>
+  <h5 class="blue-text" style="padding-top: 40px;">How important is it to you?</h5>
+  <img class="content-image" src="assets/images/Beat_create_4.jpeg">
+  <h5 class="blue-text text-center" style="padding-top: 40px;">Rank the choices against attributes… and <span style="text-decoration: underline">publish</span></h5>
+  <img class="content-image" src="assets/images/Beat_create_5.jpeg">
+  <img class="content-image" src="assets/images/Beat_create_6.jpeg">
+</div>

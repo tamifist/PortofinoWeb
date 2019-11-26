@@ -1,80 +1,45 @@
-<ngb-carousel interval="false" >
-  <ng-template ngbSlide>
-    <div class="menu-content-wrapper" [ngClass]="{
-      'menu-content-margin--desktop':!isHandset,
-      'menu-content-margin--mobile':isHandset
-      }">
-      <h6>Home Screen</h6>
-      <p>
-        Upon logging into the Pulse mobile app, the Home screen is your landing page. The Home screen is your Pulse topic feed.<br/> The feed is based on your topic preferences, your previous Pulse participation and sponsored Pulse topics.
-      </p>
-      <img class="imageShadow slide-image--large"  src="assets/images/finding_way_around-Pulse_1.jpeg" />
-
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div class="menu-content-wrapper" [ngClass]="{
-      'menu-content-margin--desktop':!isHandset,
-      'menu-content-margin--mobile':isHandset
-      }">
-      <p>
-        Each Pulse topic on the Home screen displays specific information about that Pulse. From top to bottom:
-      </p>
-      <ul>
-        <li>The Pulse topic or question</li>
-        <li>A traffic light indicator, which reflects the overall aggregate sentiment of all users for this Pulse. Red for negative; Amber for somewhat negative; green for positive.</li>
-        <li>The number of responses received</li>
-        <li>The duration (number of days:hours) left for the Pulse to run. If the Pulse is closed, then "Closed" will be displayed instead</li>
-        <li>The number of countries represented by all users that have responded to this Pulse.</li>
-      </ul>
-      <br/>
-      <p>
-        At the top the Home screen, you have options to :
-      </p>
-      <ul>
-        <li>Create a new Pulse. Refer Creating a Pulse.
-        </li>
-        <li>Search for Pulses by keywords</li>
-        <li>Access to Setting, Terms and Conditions, and our Data Policy.</li>
-      </ul>
-      <img class="imageShadow slide-image--small" src="assets/images/Pulse_create_1.jpeg" />
-      <p>Below that is a Pulse category bar. This is horizontally scrollable. You can click on any of these icons to filter the Pulse list by that category.</p>
-      <br>
-      <p>At the bottom of the Home screen is a menu bar. Use this menu bar to navigate your way to other Pulse screens.</p>
-      <img class="imageShadow slide-image--small" src="assets/images/finding_way_around-Pulse_2.jpeg" />
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div class="menu-content-wrapper" [ngClass]="{
-      'menu-content-margin--desktop':!isHandset,
-      'menu-content-margin--mobile':isHandset
-      }">
-      <h5>Trending Screen</h5>
-      <p>
-        The Trending  screen shows all Pulses that have had the most activity in the last 7 days. Activity is represented by Beats.
-      </p>
-      <h5>My Pulses</h5>
-      <p>
-        The My Pulses screen shows all Pulses that you have participated in either as a <span style="text-decoration: underline;"><b>Participant</b></span> (you have provided a Beat) or a <span style="text-decoration: underline;"><b>Publisher</b></span> (you created the Pulse).
-      </p>
-      <p>The Trending and My Pulse screens also have a menu panel at the top, which allows you to filter Pulses by category.</p>
-      <h5>Quick Pulse
-      </h5>
-      <p>Sometimes, you simply want to put out a quick simple question and get back a quick simple response. The Quick Pulse is your way to do this. If you are bored, then the Quick Pulse screen is filled with the most interesting of questions and perspectives.</p>
-      <h5>Live Pulse</h5>
-      <p>Our world is filled with live events, whether Political debates, TV contests, TV reality shows, sporting events. We watch these events and are then subjected to the reviews and opinions of others. Columnists, writers, essayists who critique and summarize these events and provide a perspective for our consumption.</p>
-      <p>The <span style="text-decoration: underline;">Live Pulse</span> is our way to allow you to share your voice, provide your own perspective, express your opinion, and create a platform for expression and change.</p>
-    </div>
-  </ng-template>
-</ngb-carousel>
-
-<img *ngIf="showNextScreen" class="image-carousel-next"
-     (click)="carouselNext()"
-     [ngClass]="{mobileStyle:isHandset}"
-     src="assets/images/arrow-right.PNG" >
-
-<img *ngIf="showPreviousScreen" class="image-carousel-previous"
-     (click)="carouselPrevious()"
-     [ngClass]="{mobileStyle:isHandset, mobileStylePreviousArray:isHandset}"
-     src="assets/images/arrow-left.png" >
+<div class="content-container" style="padding: 10px; font-size: 14px;">
+  <h5 class="blue-text">Home Screen</h5>
+  <p>Upon logging into the Pulse mobile app, the Home screen is your landing page. The Home screen is your Pulse topic feed.<br/> The feed is based on your topic preferences, your previous Pulse participation and sponsored Pulse topics.</p>
+  <img  class="content-image" src="assets/images/finding_way_around-Pulse_1.jpeg" />
+  <p>
+    Each Pulse topic on the Home screen displays specific information about that Pulse. From top to bottom:
+  </p>
+  <ul>
+    <li>The Pulse topic or question</li>
+    <li>A traffic light indicator, which reflects the overall aggregate sentiment of all users for this Pulse. Red for negative; Amber for somewhat negative; green for positive.</li>
+    <li>The number of responses received</li>
+    <li>The duration (number of days:hours) left for the Pulse to run. If the Pulse is closed, then "Closed" will be displayed instead</li>
+    <li>The number of countries represented by all users that have responded to this Pulse.</li>
+  </ul>
+  <br/>
+  <p>
+    At the top the Home screen, you have options to :
+  </p>
+  <ul>
+    <li>Create a new Pulse. Refer Creating a Pulse.
+    </li>
+    <li>Search for Pulses by keywords</li>
+    <li>Access to Setting, Terms and Conditions, and our Data Policy.</li>
+  </ul>
+  <img  class="content-image" src="assets/images/Pulse_create_1.jpeg" />
+  <p>Below that is a Pulse category bar. This is horizontally scrollable. You can click on any of these icons to filter the Pulse list by that category.</p>
+  <br>
+  <p>At the bottom of the Home screen is a menu bar. Use this menu bar to navigate your way to other Pulse screens.</p>
+  <img  class="content-image" src="assets/images/finding_way_around-Pulse_2.jpeg" />
+  <h5 class="blue-text">Trending Screen</h5>
+  <p>
+    The Trending  screen shows all Pulses that have had the most activity in the last 7 days. Activity is represented by Beats.
+  </p>
+  <h5 class="blue-text">My Pulses</h5>
+  <p>
+    The My Pulses screen shows all Pulses that you have participated in either as a <span style="text-decoration: underline;"><b>Participant</b></span> (you have provided a Beat) or a <span style="text-decoration: underline;"><b>Publisher</b></span> (you created the Pulse).
+  </p>
+  <p>The Trending and My Pulse screens also have a menu panel at the top, which allows you to filter Pulses by category.</p>
+  <h5 class="blue-text">Quick Pulse</h5>
+  <p>Sometimes, you simply want to put out a quick simple question and get back a quick simple response. The Quick Pulse is your way to do this. If you are bored, then the Quick Pulse screen is filled with the most interesting of questions and perspectives.</p>
+  <h5 class="blue-text">Live Pulse</h5>
+  <p>Our world is filled with live events, whether Political debates, TV contests, TV reality shows, sporting events. We watch these events and are then subjected to the reviews and opinions of others. Columnists, writers, essayists who critique and summarize these events and provide a perspective for our consumption.</p>
+  <p>The <span style="text-decoration: underline;">Live Pulse</span> is our way to allow you to share your voice, provide your own perspective, express your opinion, and create a platform for expression and change.</p>
+</div>
 
