@@ -10,10 +10,4 @@ import {Router} from '@angular/router';
   styleUrls: ['./language-of-pulse.component.scss']
 })
 export class LanguageOfPulseComponent extends BaseComponent {
-  navigate(url) {
-    this.router.navigate([url]);
-    try {
-      document.querySelector('#bottom').scrollIntoView();
-    } catch (e) { }
-  }
 }

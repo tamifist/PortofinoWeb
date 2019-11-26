@@ -1,0 +1,48 @@
+.desktopBottomImageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.desktopTopImageFace{
+  position: absolute;
+  right: 6%;
+  top: -45%;
+  width: 100px !important;
+  height: 100px !important;
+}
+
+
+.desktopBottomImage{
+  width: 315px; //   width: 429px;
+  height: 100px;
+  background-color: #0070c0;
+  border-radius: 15px;
+  //margin-left: 20px;
+  position: relative;
+  bottom: 10px;
+  margin-top: 67px;
+  cursor: pointer;
+}
+
+.desktopBottomImageTopText{
+  position: absolute;
+  color: white;
+  top: 11%;
+  left: 5%;
+  font-size: 12px;
+  line-height: 1.2;
+}
+.desktopBottomImageBottomText{
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  left: 5%;
+  bottom: 11%;
+}
+
+.desktopBottomImageLearnMore {
+  position: absolute;
+  bottom: -25px;
+  left: 11px;
+  color: #7F7F7F;
+}
