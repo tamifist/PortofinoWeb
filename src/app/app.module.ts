@@ -27,6 +27,7 @@ import {BaseComponent} from './components/base/base.component';
 import { FindingYourWayAroundPulseAppComponent } from './components/menu/finding-your-way-around-pulse-app/finding-your-way-around-pulse-app.component';
 import { DataAndInsightFromPulsesComponent } from './components/menu/data-and-insight-from-pulses/data-and-insight-from-pulses.component';
 import { HomeComponent } from './components/menu/home/home.component';
+import { AboutUsComponent } from './components/menu/about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { HomeComponent } from './components/menu/home/home.component';
     EnjoingLivePulseComponent,
     BaseComponent,
     DataAndInsightFromPulsesComponent,
-    HomeComponent
+    HomeComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

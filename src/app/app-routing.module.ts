@@ -17,6 +17,7 @@ import {FindingYourWayAroundPulseAppComponent} from './components/menu/finding-y
 import {EnjoingLivePulseComponent} from './components/menu/enjoing-live-pulse/enjoing-live-pulse.component';
 import {DataAndInsightFromPulsesComponent} from './components/menu/data-and-insight-from-pulses/data-and-insight-from-pulses.component';
 import {HomeComponent} from './components/menu/home/home.component';
+import {AboutUsComponent} from './components/menu/about-us/about-us.component';
 
 
 const menuRoutes: Routes = [
@@ -32,6 +33,7 @@ const menuRoutes: Routes = [
   { path: 'enjoyingLivePulse', component: EnjoingLivePulseComponent},
   { path: 'dataAndInsightsFromPulses', component: DataAndInsightFromPulsesComponent},
   { path: 'findingYourWayAroundPulseApp', component: FindingYourWayAroundPulseAppComponent},
+  { path: 'aboutUs', component: AboutUsComponent},
 ];
 
 const routes: Routes = [

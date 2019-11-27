@@ -42,6 +42,10 @@
          routerLink="termOfUse">Terms of Use</a>
       <a mat-list-item
          class="link"
+         (click)="(isHandset) && drawer.close()"
+         routerLink="aboutUs">About Us</a>
+      <a mat-list-item
+         class="link"
          href="mailto:info@truepulse.net">Contact Us</a>
     </mat-nav-list>
     </div>
