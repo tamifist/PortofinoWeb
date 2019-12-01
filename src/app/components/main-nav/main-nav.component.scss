@@ -74,7 +74,7 @@ mat-sidenav {
   height: 100px;
 }
 
-.banner-image--home {
+.home-banner-image--landscape {
   background-image: url('../../../assets/images/banner_image_home.jpg');
   height: 500px;
   background-size:     cover;
@@ -82,7 +82,15 @@ mat-sidenav {
   background-position: 35% 0%;
 }
 
-.banner-image--home--mobile {
+.home-banner-image--landscape-mobile {
+  background-image: url('../../../assets/images/banner_image_home.jpg');
+  height: 375px;
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: 35% 0%;
+}
+
+.home-banner-image--portrait {
   background-image: url('../../../assets/images/banner-image-home-mobile.jpg');
   height: 812px;
   background-size:     cover;

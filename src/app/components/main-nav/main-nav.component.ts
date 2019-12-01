@@ -3,6 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import {filter, map, shareReplay} from 'rxjs/operators';
 import {NavigationStart, Router} from '@angular/router';
 import {BaseComponent} from '../base/base.component';
+import {MatSidenav} from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-main-nav',
@@ -12,14 +13,23 @@ import {BaseComponent} from '../base/base.component';
 
 export class MainNavComponent extends BaseComponent implements  AfterViewInit {
 
-  @ViewChild('matnavlist', {static : false }) matnavlist: ElementRef ;
+  isHome: boolean;
+
+  @ViewChild('matnavlist', {static : false }) matnavlist: ElementRef;
+  @ViewChild('drawer', {static : false }) sidenav: MatSidenav;
 
   constructor(public breakpointObserver: BreakpointObserver,
               private render: Renderer2,
               public router: Router) {
     super(breakpointObserver, router);
   }
-  isHome: boolean;
+
+  ngOnInit(): void {
+    this.router.events.subscribe(() => {
+      this.sidenav.close();
+    });
+  }
+
   ngAfterViewInit(): void {
     let childrenItems = this.matnavlist.nativeElement.children[0].children;
 

@@ -8,6 +8,7 @@ import {Router} from '@angular/router';
 })
 export class BaseComponent {
   public isHandset: boolean;
+  public isHandsetLandscape: boolean;
 
   constructor(public  breakpointObserver: BreakpointObserver, public router: Router) {
     this.breakpointObserver.observe([Breakpoints.Handset]) // , Breakpoints.Tablet
@@ -16,6 +17,13 @@ export class BaseComponent {
         shareReplay()
       ).subscribe((result) => {
       this.isHandset = result;
+    });
+
+    breakpointObserver.observe([
+      Breakpoints.HandsetLandscape,
+      // Breakpoints.Handset
+    ]).subscribe(result => {
+      this.isHandsetLandscape = result.matches;
     });
   }
 

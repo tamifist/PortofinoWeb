@@ -1,65 +1,43 @@
-<!--<a id="bottom"></a>-->
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer mode="over" position="end">
-<!--    [opened]="(isHandset) === false"-->
-<!--    [mode]="(isHandset) ? 'over' : 'side'"-->
     <div #matnavlist>
-    <mat-nav-list  [ngClass]="{desktopStyle:!isHandset}" >
-      <a mat-list-item
-         (click)="(isHandset) && drawer.close()"
-         routerLink="languageOfPulse" >The Language of Pulse</a>
-      <a mat-list-item
-         (click)="(isHandset) && drawer.close()"
-         routerLink="creatingPulse" >Creating a Pulse</a>
-      <a mat-list-item
-         (click)="(isHandset) && drawer.close()"
-         routerLink="respondingToPulseWithBeat">Responding to a Pulse with a Beat</a>
-      <a mat-list-item class="link"
-         (click)="(isHandset) && drawer.close()"
-         routerLink="enjoyingLivePulse">Enjoying a Live Pulse</a>
-      <a mat-list-item
-         (click)="(isHandset) && drawer.close()"
-         routerLink="pulseForCorporates">Pulse for Corporates</a>
-      <a mat-list-item
-         (click)="(isHandset) && drawer.close()"
-         routerLink="managingYourAccount">Managing Your Account</a>
-      <a mat-list-item
-         (click)="(isHandset) && drawer.close()"
-         routerLink="findingYourWayAroundPulseApp">Finding Your Way Around the Pulse App</a>
-      <a mat-list-item
-         (click)="(isHandset) && drawer.close()"
-         routerLink="dataAndInsightsFromPulses">Data and Insights from Pulses</a>
-      <a mat-list-item
-         (click)="(isHandset) && drawer.close()"
-         routerLink="privacySettings">Your Privacy and Safety</a>
-      <a mat-list-item
-         class="link"
-         (click)="(isHandset) && drawer.close()"
-         routerLink="privacyPolicy">Privacy Policy</a>
-      <a mat-list-item
-         class="link"
-         (click)="(isHandset) && drawer.close()"
-         routerLink="termOfUse">Terms of Use</a>
-      <a mat-list-item
-         class="link"
-         (click)="(isHandset) && drawer.close()"
-         routerLink="aboutUs">About Us</a>
-      <a mat-list-item
-         class="link"
-         href="mailto:info@truepulse.net">Contact Us</a>
-    </mat-nav-list>
+      <mat-nav-list  [ngClass]="{desktopStyle:!isHandset}" >
+        <a mat-list-item routerLink="languageOfPulse" >The Language of Pulse</a>
+        <a mat-list-item routerLink="creatingPulse" >Creating a Pulse</a>
+        <a mat-list-item routerLink="respondingToPulseWithBeat">Responding to a Pulse with a Beat</a>
+        <a mat-list-item routerLink="enjoyingLivePulse">Enjoying a Live Pulse</a>
+        <a mat-list-item routerLink="pulseForCorporates">Pulse for Corporates</a>
+        <a mat-list-item routerLink="managingYourAccount">Managing Your Account</a>
+        <a mat-list-item routerLink="findingYourWayAroundPulseApp">Finding Your Way Around the Pulse App</a>
+        <a mat-list-item routerLink="dataAndInsightsFromPulses">Data and Insights from Pulses</a>
+        <a mat-list-item routerLink="privacySettings">Your Privacy and Safety</a>
+        <a mat-list-item routerLink="privacyPolicy">Privacy Policy</a>
+        <a mat-list-item routerLink="termOfUse">Terms of Use</a>
+        <a mat-list-item routerLink="aboutUs">About Us</a>
+        <a mat-list-item href="mailto:info@truepulse.net">Contact Us</a>
+      </mat-nav-list>
     </div>
   </mat-sidenav>
   <mat-sidenav-content>
-     <div class="banner--home" [ngClass]="isHandset ? 'banner-image--home--mobile' : 'banner-image--home'" *ngIf="isHome">
+     <div class="banner--home"
+          [ngClass]="isHandset ? isHandsetLandscape ? 'home-banner-image--landscape-mobile' : 'home-banner-image--portrait' : 'home-banner-image--landscape'" *ngIf="isHome">
        <div style="height:100%; width: 55%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;">
          <a (click)="navigate('/menu/home')">
            <img style="height: 60px;" src="assets/images/TruePulseLogo-WHITE.png" />
          </a>
-         <div class="text-white text-center" style="height:100%;  width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+         <div class="text-white text-center"
+              [ngStyle]="{
+                'height': '100%',
+                'width': '100%', 'display': 'flex',
+                'flex-direction': 'column',
+                'align-items': 'center',
+                'justify-content': 'center',
+                'margin-bottom': isHandset ? isHandsetLandscape ? '70px' : '250px' : '0px',
+                'font-size': '18px',
+                'padding-right': isHandset ? isHandsetLandscape ? '120px' : '0px' : '100px'
+              }">
            <span>
-            Is your opinion informed, a guess or your<br/>
-            gut?<br/>
+            Is your opinion informed, a guess or your gut?<br/>
             You will be either lucky or wrong.
            </span>
          </div>
@@ -69,7 +47,6 @@
            type="button"
            mat-icon-button
            (click)="drawer.toggle()">
-           <!--        *ngIf="isHandset"-->
            <mat-icon class="white-icon">menu</mat-icon>
          </button>
          <a href='https://play.google.com/store/apps/details?id=net.truepulse.mobileapp&hl=en_US&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
@@ -88,7 +65,6 @@
          type="button"
          mat-icon-button
          (click)="drawer.toggle()">
-         <!--        *ngIf="isHandset"-->
          <mat-icon class="white-icon">menu</mat-icon>
        </button>
      </div>
